@@ -1,0 +1,1045 @@
+@charset "UTF-8";
+
+/*!
+ * Marp / Marpit Zebra and Zebra 2 (https://shoya.io/ja) theme.
+ *
+ * @theme zebra
+ * @author Ko Isoda
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+JP&family=Oswald&family=Roboto&family=Roboto+Mono&family=Source+Code+Pro&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css");
+
+:root {
+    /* フォントサイズ, 余白, フォント */
+    --font-size: 28px;
+    --heading-tags-line-spacing: 0.8em;
+    --heading-upper-spacing: 50px;
+    --text-font: "Roboto", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --title-font: "Oswald", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --code-font: "Source Code Pro", "Noto Sans JP", "Roboto Mono", monospace;
+    --quote-font: "Times New Roman", serif;
+    /* light */
+    --light-base-color: #ffffff;
+    --light-main-color: #073543;
+    --light-accent-color: #0065c1;
+    --light-text-color: #073543;
+    --light-code-block-color: #094254;
+    --light-table-block-color: rgba(7, 53, 67, 0.1);
+    --light-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --light-middle-color: #839aa1;
+    /* dark */
+    --dark-base-color: #073543;
+    --dark-main-color: #ffffff;
+    --dark-accent-color: #008d92;
+    --dark-text-color: #ffffff;
+    --dark-code-block-color: #cccccc;
+    --dark-table-block-color: rgba(255, 255, 255, 0.1);
+    --dark-table-block-invert-color: rgba(7, 53, 67, 0.9);
+    --dark-middle-color: #839aa1;
+    /* black */
+    --black-base-color: #ffffff;
+    --black-main-color: #333333;
+    --black-accent-color: #008d92;
+    --black-text-color: #333333;
+    --black-code-block-color: #404040;
+    --black-table-block-color: rgba(51, 51, 51, 0.1);
+    --black-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --black-middle-color: #999999;
+    /* blue */
+    --blue-base-color: #ffffff;
+    --blue-main-color: #0065c1;
+    --blue-accent-color: #f339a5;
+    --blue-text-color: #333333;
+    --blue-code-block-color: #00519a;
+    --blue-table-block-color: rgba(0, 101, 193, 0.1);
+    --blue-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --blue-middle-color: #999999;
+    /* green */
+    --green-base-color: #ffffff;
+    --green-main-color: #008d92;
+    --green-accent-color: #ff3e00;
+    --green-text-color: #333333;
+    --green-code-block-color: #007175;
+    --green-table-block-color: rgba(0, 141, 146, 0.1);
+    --green-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --green-middle-color: #999999;
+}
+
+/* 共通 */
+
+svg[data-marp-fitting="svg"] {
+    max-height: 580px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: var(--heading-tags-line-spacing) 0 0 0;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+p,
+blockquote {
+    margin: 1em 0 0 0;
+}
+
+ul>li,
+ol>li {
+    margin: 0.3em 0 0 0;
+}
+
+ul>li>p,
+ol>li>p {
+    margin: 0.6em 0 0 0;
+}
+
+code {
+    display: inline-block;
+    font-family: var(--code-font);
+    font-size: 0.8em;
+    letter-spacing: 0;
+    margin: -0.1em 0.15em;
+    padding: 0.1em 0.2em;
+    vertical-align: baseline;
+}
+
+pre {
+    display: block;
+    margin: 1em 0 0 0;
+    min-height: 1em;
+    overflow: visible;
+}
+
+pre code {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 100%;
+    padding: 0.5em;
+    font-size: 0.7em;
+}
+
+pre code svg[data-marp-fitting="svg"] {
+    max-height: calc(580px - 1em);
+}
+
+blockquote {
+    margin: 1em 0 0 0;
+    padding: 0 1em;
+    position: relative;
+}
+
+blockquote::after,
+blockquote::before {
+    content: "“";
+    display: block;
+    font-family: var(--quote-font);
+    font-weight: bold;
+    position: absolute;
+}
+
+blockquote::before {
+    top: -0.2em;
+    left: 0;
+}
+
+blockquote::after {
+    right: 0;
+    bottom: -0.2em;
+    transform: rotate(180deg);
+}
+
+blockquote>*:first-child {
+    margin-top: 0;
+}
+
+mark {
+    background: transparent;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1em 0 0 0;
+}
+
+table th,
+table td {
+    padding: 0.2em 0.4em;
+    border-width: 1px;
+    border-style: solid;
+}
+
+section {
+    font-size: var(--font-size);
+    font-family: var(--text-font);
+    line-height: 1.35;
+    letter-spacing: 1.25px;
+    padding: var(--heading-upper-spacing) 70px;
+    color: var(--light-text-color);
+    background-color: var(--light-base-color);
+}
+
+section>*:first-child,
+section>header:first-child+* {
+    margin-top: 0;
+}
+
+section a,
+section mark {
+    color: var(--light-accent-color);
+}
+
+section highlight {
+    background: var(--light-accent-color);
+}
+
+section underline {
+    text-decoration: underline;
+    text-decoration-color: var(--light-accent-color);
+}
+
+section hr {
+    background: var(--light-middle-color);
+}
+
+section code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+    color: var(--light-accent-color);
+}
+
+section h1 img,
+section h2 img,
+section h3 img,
+section h4 img,
+section h5 img,
+section h6 img {
+    display: block;
+    margin: auto;
+}
+
+section pre>code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+    color: var(--light-middle-color);
+}
+
+section table th,
+section table td {
+    border-color: var(--light-text-color);
+}
+
+section table thead th {
+    background: var(--light-text-color);
+    color: var(--light-base-color);
+}
+
+section table tbody>tr:nth-child(odd) td,
+section table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-color);
+}
+
+header,
+footer,
+section::after {
+    box-sizing: border-box;
+    font-size: 66%;
+    height: 70px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 10px 25px;
+    position: absolute;
+}
+
+header {
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section::after {
+    right: 0;
+    bottom: 0;
+    font-size: 80%;
+}
+
+/* 2段組み */
+
+section.column {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+        "Heading Heading"
+        "LeftSide RightSide";
+}
+
+section.column h1 {
+    grid-area: Heading;
+    margin: 0;
+}
+
+section.column .left {
+    grid-area: LeftSide;
+    margin: 0;
+}
+
+section.column .right {
+    grid-area: RightSide;
+    margin: 0;
+}
+
+/* タイトル */
+
+section.title {
+    padding: 0 70px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 180px 120px 180px 60px;
+    grid-template-areas:
+        "."
+        "Title"
+        "Subtitle"
+        "Name"
+        ".";
+}
+
+section.title h1 {
+    grid-area: Title;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: var(--title-font);
+    font-size: 2.4em;
+}
+
+section.title h2 {
+    grid-area: Subtitle;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: var(--title-font);
+    font-size: 1.3em;
+}
+
+section.title h3 {
+    grid-area: Name;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section.title header,
+section.title footer {
+    display: none;
+}
+
+/* セクション */
+
+section.heading {
+    padding: 0 70px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 180px 30px 150px 180px;
+    grid-template-areas:
+        "."
+        "Section"
+        "."
+        "Subsection"
+        ".";
+}
+
+section.heading h1 {
+    grid-area: Section;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section.heading h2 {
+    grid-area: Subsection;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* 見出し固定 */
+
+section.black h1,
+section.blue h1,
+section.green h1 {
+    margin: calc(-1 * var(--heading-upper-spacing)) -70px calc(var(--heading-tags-line-spacing) * (1.5 / 1.8));
+    padding-top: var(--heading-upper-spacing);
+    padding-left: 70px;
+}
+
+section.black.column h2,
+section.blue.column h2,
+section.green.column h2 {
+    margin: 0;
+    padding: 0;
+}
+
+section.black.title h1,
+section.blue.title h1,
+section.green.title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section.black.heading h1,
+section.blue.heading h1,
+section.green.heading h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* 中央寄せ */
+
+section.lead:not(.column) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+section.black.lead h1,
+section.blue.lead h1,
+section.green.lead h1 {
+    padding-left: 0;
+}
+
+section.black.lead:not(.column):not(.title):not(.heading) h1,
+section.blue.lead:not(.column):not(.title):not(.heading) h1,
+section.green.lead:not(.column):not(.title):not(.heading) h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+}
+
+section.black.lead:not(.column):not(.title):not(.heading) header,
+section.blue.lead:not(.column):not(.title):not(.heading) header,
+section.green.lead:not(.column):not(.title):not(.heading) header {
+    z-index: 1;
+}
+
+section.lead h1,
+section.lead h2,
+section.lead h3,
+section.lead h4,
+section.lead h5,
+section.lead h6,
+section.lead p {
+    text-align: center;
+    justify-content: center;
+}
+
+section.lead h1 svg[data-marp-fitting='svg'],
+section.lead h2 svg[data-marp-fitting='svg'],
+section.lead h3 svg[data-marp-fitting='svg'],
+section.lead h4 svg[data-marp-fitting='svg'],
+section.lead h5 svg[data-marp-fitting='svg'],
+section.lead h6 svg[data-marp-fitting='svg'] {
+    --preserve-aspect-ratio: xMidYMid meet;
+}
+
+section.lead blockquote>h1,
+section.lead blockquote>h2,
+section.lead blockquote>h3,
+section.lead blockquote>h4,
+section.lead blockquote>h5,
+section.lead blockquote>h6,
+section.lead blockquote>p {
+    text-align: left;
+}
+
+section.lead blockquote svg[data-marp-fitting='svg']:not([data-marp-fitting-math]) {
+    --preserve-aspect-ratio: xMinYMin meet;
+}
+
+section.lead ul>li>p,
+section.lead ol>li>p {
+    text-align: left;
+}
+
+section.lead table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 反転 */
+
+section.invert {
+    color: var(--light-base-color);
+    background-color: var(--light-text-color);
+}
+
+section.invert table th,
+section.invert table td {
+    border-color: var(--light-base-color);
+}
+
+section.invert table thead th {
+    background: var(--light-base-color);
+    color: var(--light-text-color);
+}
+
+section.invert table tbody>tr:nth-child(odd) td,
+section.invert table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-invert-color);
+}
+
+/* light */
+
+section.light {
+    color: var(--light-text-color);
+    background-color: var(--light-base-color);
+}
+
+section.light a,
+section.light mark {
+    color: var(--light-accent-color);
+}
+
+section.light highlight {
+    background: var(--light-accent-color);
+}
+
+section.light underline {
+    text-decoration-color: var(--light-accent-color);
+}
+
+section.light hr {
+    background: var(--light-middle-color);
+}
+
+section.light code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section.light h1 strong,
+section.light h2 strong,
+section.light h3 strong,
+section.light h4 strong,
+section.light h5 strong,
+section.light h6 strong {
+    color: var(--light-accent-color);
+}
+
+section.light pre>code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section.light header,
+section.light footer,
+section.light section::after,
+section.light blockquote::before,
+section.light blockquote::after {
+    color: var(--light-middle-color);
+}
+
+section.light table th,
+section.light table td {
+    border-color: var(--light-text-color);
+}
+
+section.light table thead th {
+    background: var(--light-main-color);
+    color: var(--light-base-color);
+}
+
+section.light table tbody>tr:nth-child(odd) td,
+section.light table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-color);
+}
+
+/* light invert */
+
+section.light.invert {
+    color: var(--light-base-color);
+    background-color: var(--light-main-color);
+}
+
+section.light.invert table th,
+section.light.invert table td {
+    border-color: var(--light-base-color);
+}
+
+section.light.invert table thead th {
+    background: var(--light-base-color);
+    color: var(--light-main-color);
+}
+
+section.light.invert table tbody>tr:nth-child(odd) td,
+section.light.invert table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-invert-color);
+}
+
+/* dark */
+
+section.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-base-color);
+}
+
+section.dark a,
+section.dark mark {
+    color: var(--dark-accent-color);
+}
+
+section.dark highlight {
+    background: var(--dark-accent-color);
+}
+
+section.dark underline {
+    text-decoration-color: var(--dark-accent-color);
+}
+
+section.dark hr {
+    background: var(--dark-middle-color);
+}
+
+section.dark code {
+    background: var(--dark-code-block-color);
+    color: var(--dark-text-color);
+}
+
+section.dark h1 strong,
+section.dark h2 strong,
+section.dark h3 strong,
+section.dark h4 strong,
+section.dark h5 strong,
+section.dark h6 strong {
+    color: var(--dark-accent-color);
+}
+
+section.dark pre>code {
+    background: var(--dark-code-block-color);
+    color: var(--dark-text-color);
+}
+
+section.dark header,
+section.dark footer,
+section.dark section::after,
+section.dark blockquote::before,
+section.dark blockquote::after {
+    color: var(--dark-middle-color);
+}
+
+section.dark table th,
+section.dark table td {
+    border-color: var(--dark-text-color);
+}
+
+section.dark table thead th {
+    background: var(--dark-main-color);
+    color: var(--dark-base-color);
+}
+
+section.dark table tbody>tr:nth-child(odd) td,
+section.dark table tbody>tr:nth-child(odd) th {
+    background: var(--dark-table-block-color);
+}
+
+/* dark invert */
+
+section.dark.invert {
+    color: var(--dark-base-color);
+    background-color: var(--dark-main-color);
+}
+
+section.dark.invert table th,
+section.dark.invert table td {
+    border-color: var(--dark-base-color);
+}
+
+section.dark.invert table thead th {
+    background: var(--dark-base-color);
+    color: var(--dark-main-color);
+}
+
+section.dark.invert table tbody>tr:nth-child(odd) td,
+section.dark.invert table tbody>tr:nth-child(odd) th {
+    background: var(--dark-table-block-invert-color);
+}
+
+/* black */
+
+section.black {
+    color: var(--black-text-color);
+    background-color: var(--black-base-color);
+}
+
+section.black a,
+section.black mark {
+    color: var(--black-accent-color);
+}
+
+section.black highlight {
+    background: var(--black-accent-color);
+}
+
+section.black underline {
+    text-decoration-color: var(--black-accent-color);
+}
+
+section.black hr {
+    background: var(--black-middle-color);
+}
+
+section.black code {
+    background: var(--black-code-block-color);
+    color: var(--black-text-color);
+}
+
+section.black h1 strong,
+section.black h2 strong,
+section.black h3 strong,
+section.black h4 strong,
+section.black h5 strong,
+section.black h6 strong {
+    color: var(--black-accent-color);
+}
+
+section.black pre>code {
+    background: var(--black-code-block-color);
+    color: var(--black-text-color);
+}
+
+section.black header,
+section.black footer,
+section.black section::after,
+section.black blockquote::before,
+section.black blockquote::after {
+    color: var(--black-middle-color);
+}
+
+section.black table th,
+section.black table td {
+    border-color: var(--black-text-color);
+}
+
+section.black table thead th {
+    background: var(--black-main-color);
+    color: var(--black-base-color);
+}
+
+section.black table tbody>tr:nth-child(odd) td,
+section.black table tbody>tr:nth-child(odd) th {
+    background: var(--black-table-block-color);
+}
+
+section.black h1,
+section.black.title,
+section.black.heading {
+    color: var(--black-base-color);
+    background-color: var(--black-main-color);
+}
+
+/* black invert */
+
+section.black.invert {
+    color: var(--black-base-color);
+    background-color: var(--black-main-color);
+}
+
+section.black.invert table th,
+section.black.invert table td {
+    border-color: var(--black-base-color);
+}
+
+section.black.invert table thead th {
+    background: var(--black-base-color);
+    color: var(--black-main-color);
+}
+
+section.black.invert table tbody>tr:nth-child(odd) td,
+section.black.invert table tbody>tr:nth-child(odd) th {
+    background: var(--black-table-block-invert-color);
+}
+
+section.black.invert h1,
+section.black.title.invert,
+section.black.heading.invert {
+    color: var(--black-main-color);
+    background-color: var(--black-base-color);
+}
+
+/* blue */
+
+section.blue {
+    color: var(--blue-text-color);
+    background-color: var(--blue-base-color);
+}
+
+section.blue a,
+section.blue mark {
+    color: var(--blue-accent-color);
+}
+
+section.blue highlight {
+    background: var(--blue-accent-color);
+}
+
+section.blue underline {
+    text-decoration-color: var(--blue-accent-color);
+}
+
+section.blue hr {
+    background: var(--blue-middle-color);
+}
+
+section.blue code {
+    background: var(--blue-code-block-color);
+    color: var(--blue-text-color);
+}
+
+section.blue h1 strong,
+section.blue h2 strong,
+section.blue h3 strong,
+section.blue h4 strong,
+section.blue h5 strong,
+section.blue h6 strong {
+    color: var(--blue-accent-color);
+}
+
+section.blue pre>code {
+    background: var(--blue-code-block-color);
+    color: var(--blue-text-color);
+}
+
+section.blue header,
+section.blue footer,
+section.blue section::after,
+section.blue blockquote::before,
+section.blue blockquote::after {
+    color: var(--blue-middle-color);
+}
+
+section.blue table th,
+section.blue table td {
+    border-color: var(--blue-text-color);
+}
+
+section.blue table thead th {
+    background: var(--blue-main-color);
+    color: var(--blue-base-color);
+}
+
+section.blue table tbody>tr:nth-child(odd) td,
+section.blue table tbody>tr:nth-child(odd) th {
+    background: var(--blue-table-block-color);
+}
+
+section.blue h1,
+section.blue.title,
+section.blue.heading {
+    color: var(--blue-base-color);
+    background-color: var(--blue-main-color);
+}
+
+/* blue invert */
+
+section.blue.invert {
+    color: var(--blue-text-color);
+    background-color: var(--blue-main-color);
+}
+
+section.blue.invert table th,
+section.blue.invert table td {
+    border-color: var(--blue-text-color);
+}
+
+section.blue.invert table thead th {
+    background: var(--blue-base-color);
+    color: var(--blue-main-color);
+}
+
+section.blue.invert table tbody>tr:nth-child(odd) td,
+section.blue.invert table tbody>tr:nth-child(odd) th {
+    background: var(--blue-table-block-invert-color);
+}
+
+section.blue.invert h1,
+section.blue.title.invert,
+section.blue.heading.invert {
+    color: var(--blue-main-color);
+    background-color: var(--blue-base-color);
+}
+
+/* green */
+
+section.green {
+    color: var(--green-text-color);
+    background-color: var(--green-base-color);
+}
+
+section.green a,
+section.green mark {
+    color: var(--green-accent-color);
+}
+
+section.green highlight {
+    background: var(--green-accent-color);
+}
+
+section.green underline {
+    text-decoration-color: var(--green-accent-color);
+}
+
+section.green hr {
+    background: var(--green-middle-color);
+}
+
+section.green code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
+}
+
+section.green h1 strong,
+section.green h2 strong,
+section.green h3 strong,
+section.green h4 strong,
+section.green h5 strong,
+section.green h6 strong {
+    color: var(--green-accent-color);
+}
+
+section.green pre>code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
+}
+
+section.green header,
+section.green footer,
+section.green section::after,
+section.green blockquote::before,
+section.green blockquote::after {
+    color: var(--green-middle-color);
+}
+
+section.green table th,
+section.green table td {
+    border-color: var(--green-text-color);
+}
+
+section.green table thead th {
+    background: var(--green-main-color);
+    color: var(--green-base-color);
+}
+
+section.green table tbody>tr:nth-child(odd) td,
+section.green table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-color);
+}
+
+section.green h1,
+section.green.title,
+section.green.heading {
+    color: var(--green-base-color);
+    background-color: var(--green-main-color);
+}
+
+/* green invert */
+
+section.green.invert {
+    color: var(--green-text-color);
+    background-color: var(--green-main-color);
+}
+
+section.green.invert table th,
+section.green.invert table td {
+    border-color: var(--green-text-color);
+}
+
+section.green.invert table thead th {
+    background: var(--green-base-color);
+    color: var(--green-main-color);
+}
+
+section.green.invert table tbody>tr:nth-child(odd) td,
+section.green.invert table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-invert-color);
+}
+
+section.green.invert h1,
+section.green.title.invert,
+section.green.heading.invert {
+    color: var(--green-main-color);
+    background-color: var(--green-base-color);
+}
