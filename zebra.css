@@ -238,6 +238,11 @@ section underline {
     text-decoration-color: var(--light-accent-color);
 }
 
+section sup a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
 section hr {
     background: var(--light-middle-color);
 }
@@ -547,6 +552,10 @@ section.invert {
     background-color: var(--light-text-color);
 }
 
+section.invert sup a {
+    color: var(--light-base-color);
+}
+
 section.invert table th,
 section.invert table td {
     border-color: var(--light-base-color);
@@ -580,6 +589,10 @@ section.light highlight {
 
 section.light underline {
     text-decoration-color: var(--light-accent-color);
+}
+
+section.light sup a {
+    color: var(--light-text-color);
 }
 
 section.light hr {
@@ -635,6 +648,10 @@ section.light.invert {
     background-color: var(--light-main-color);
 }
 
+section.light.invert sup a {
+    color: var(--light-base-color);
+}
+
 section.light.invert table th,
 section.light.invert table td {
     border-color: var(--light-base-color);
@@ -668,6 +685,10 @@ section.dark highlight {
 
 section.dark underline {
     text-decoration-color: var(--dark-accent-color);
+}
+
+section.dark sup a {
+    color: var(--dark-text-color);
 }
 
 section.dark hr {
@@ -723,6 +744,10 @@ section.dark.invert {
     background-color: var(--dark-main-color);
 }
 
+section.dark.invert sup a {
+    color: var(--dark-base-color);
+}
+
 section.dark.invert table th,
 section.dark.invert table td {
     border-color: var(--dark-base-color);
@@ -756,6 +781,10 @@ section.black highlight {
 
 section.black underline {
     text-decoration-color: var(--black-accent-color);
+}
+
+section.black sup a {
+    color: var(--black-text-color);
 }
 
 section.black hr {
@@ -818,6 +847,10 @@ section.black.invert {
     background-color: var(--black-main-color);
 }
 
+section.black.invert sup a {
+    color: var(--black-base-color);
+}
+
 section.black.invert table th,
 section.black.invert table td {
     border-color: var(--black-base-color);
@@ -858,6 +891,10 @@ section.blue highlight {
 
 section.blue underline {
     text-decoration-color: var(--blue-accent-color);
+}
+
+section.blue sup a {
+    color: var(--blue-text-color);
 }
 
 section.blue hr {
@@ -920,6 +957,10 @@ section.blue.invert {
     background-color: var(--blue-main-color);
 }
 
+section.blue.invert sup a {
+    color: var(--blue-text-color);
+}
+
 section.blue.invert table th,
 section.blue.invert table td {
     border-color: var(--blue-text-color);
@@ -960,6 +1001,10 @@ section.green highlight {
 
 section.green underline {
     text-decoration-color: var(--green-accent-color);
+}
+
+section.green sup a {
+    color: var(--green-text-color);
 }
 
 section.green hr {
@@ -1020,6 +1065,10 @@ section.green.heading {
 section.green.invert {
     color: var(--green-text-color);
     background-color: var(--green-main-color);
+}
+
+section.green.invert sup a {
+    color: var(--green-text-color);
 }
 
 section.green.invert table th,
