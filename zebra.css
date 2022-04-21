@@ -29,8 +29,8 @@
     --light-accent-color: #0065c1;
     --light-text-color: #073543;
     --light-code-block-color: #094254;
-    --light-table-block-color: rgba(7, 53, 67, 0.1);
-    --light-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --light-table-block-color: rgba(7, 53, 67, 0.5);
+    --light-table-block-invert-color: rgba(255, 255, 255, 0.5);
     --light-middle-color: #839aa1;
     /* dark */
     --dark-base-color: #073543;
@@ -38,35 +38,35 @@
     --dark-accent-color: #008d92;
     --dark-text-color: #ffffff;
     --dark-code-block-color: #cccccc;
-    --dark-table-block-color: rgba(255, 255, 255, 0.1);
-    --dark-table-block-invert-color: rgba(7, 53, 67, 0.9);
+    --dark-table-block-color: rgba(255, 255, 255, 0.5);
+    --dark-table-block-invert-color: rgba(7, 53, 67, 0.5);
     --dark-middle-color: #839aa1;
     /* black */
     --black-base-color: #ffffff;
     --black-main-color: #333333;
     --black-accent-color: #008d92;
     --black-text-color: #333333;
-    --black-code-block-color: #404040;
-    --black-table-block-color: rgba(51, 51, 51, 0.1);
-    --black-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --black-code-block-color: #cccccc;
+    --black-table-block-color: rgba(51, 51, 51, 0.5);
+    --black-table-block-invert-color: rgba(255, 255, 255, 0.5);
     --black-middle-color: #999999;
     /* blue */
     --blue-base-color: #ffffff;
     --blue-main-color: #0065c1;
     --blue-accent-color: #f339a5;
     --blue-text-color: #333333;
-    --blue-code-block-color: #00519a;
-    --blue-table-block-color: rgba(0, 101, 193, 0.1);
-    --blue-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --blue-code-block-color: #cccccc;
+    --blue-table-block-color: rgba(0, 101, 193, 0.5);
+    --blue-table-block-invert-color: rgba(255, 255, 255, 0.5);
     --blue-middle-color: #999999;
     /* green */
     --green-base-color: #ffffff;
     --green-main-color: #008d92;
     --green-accent-color: #ff3e00;
     --green-text-color: #333333;
-    --green-code-block-color: #007175;
-    --green-table-block-color: rgba(0, 141, 146, 0.1);
-    --green-table-block-invert-color: rgba(255, 255, 255, 0.9);
+    --green-code-block-color: #cccccc;
+    --green-table-block-color: rgba(0, 141, 146, 0.5);
+    --green-table-block-invert-color: rgba(255, 255, 255, 0.5);
     --green-middle-color: #999999;
 }
 
@@ -953,17 +953,17 @@ section.blue.heading {
 /* blue invert */
 
 section.blue.invert {
-    color: var(--blue-text-color);
+    color: var(--blue-base-color);
     background-color: var(--blue-main-color);
 }
 
 section.blue.invert sup a {
-    color: var(--blue-text-color);
+    color: var(--blue-base-color);
 }
 
 section.blue.invert table th,
 section.blue.invert table td {
-    border-color: var(--blue-text-color);
+    border-color: var(--blue-base-color);
 }
 
 section.blue.invert table thead th {
@@ -1063,17 +1063,17 @@ section.green.heading {
 /* green invert */
 
 section.green.invert {
-    color: var(--green-text-color);
+    color: var(--green-base-color);
     background-color: var(--green-main-color);
 }
 
 section.green.invert sup a {
-    color: var(--green-text-color);
+    color: var(--green-base-color);
 }
 
 section.green.invert table th,
 section.green.invert table td {
-    border-color: var(--green-text-color);
+    border-color: var(--green-base-color);
 }
 
 section.green.invert table thead th {
