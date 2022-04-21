@@ -1,1 +1,1737 @@
+@charset "UTF-8";
 
+/*!
+ * Marp / Marpit Azusa Colors and Azusa 3 (https://azusa3.sanographix.net) theme.
+ *
+ * @theme azusa
+ * @author Ko Isoda
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&family=Montserrat&family=Noto+Sans+JP&family=Roboto+Mono&family=Source+Code+Pro&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css");
+
+:root {
+    /* フォントサイズ, 余白, フォント */
+    --font-size: 28px;
+    --heading-tags-line-spacing: 0.8em;
+    --heading-upper-spacing: 50px;
+    --text-font: "Montserrat", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --title-font: "Josefin Sans", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --code-font: "Source Code Pro", "Noto Sans JP", "Roboto Mono", monospace;
+    --quote-font: "Times New Roman", serif;
+    /* light */
+    --light-base-color: #fcfdf2;
+    --light-main-color: #393c41;
+    --light-accent-color: #19af77;
+    --light-text-color: #393c41;
+    --light-code-block-color: #eeeddc;
+    --light-table-block-color: rgba(57, 60, 65, 0.5);
+    --light-table-block-invert-color: rgba(252, 253, 242, 0.5);
+    --light-middle-color: #9b9d9a;
+    /* dark */
+    --dark-base-color: #191a1c;
+    --dark-main-color: #fcfdf2;
+    --dark-accent-color: #5ae08e;
+    --dark-text-color: #fcfdf2;
+    --dark-code-block-color: #393c41;
+    --dark-table-block-color: rgba(252, 253, 242, 0.5);
+    --dark-table-block-invert-color: rgba(25, 26, 28, 0.5);
+    --dark-middle-color: #8b8c87;
+    /* green */
+    --green-base-color: #fff5e3;
+    --green-main-color: #33b490;
+    --green-accent-color: #ff9000;
+    --green-text-color: #464e70;
+    --green-code-block-color: #393c41;
+    --green-table-block-color: rgba(51, 180, 144, 0.5);
+    --green-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --green-middle-color: #a3a2aa;
+    /* black */
+    --black-base-color: #fff5e3;
+    --black-main-color: #464e70;
+    --black-accent-color: #33b490;
+    --black-text-color: #464e70;
+    --black-code-block-color: #393c41;
+    --black-table-block-color: rgba(70, 78, 112, 0.5);
+    --black-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --black-middle-color: #a3a2aa;
+    /* purple */
+    --purple-base-color: #fff5e3;
+    --purple-main-color: #b967c7;
+    --purple-accent-color: #ff9000;
+    --purple-text-color: #464e70;
+    --purple-code-block-color: #393c41;
+    --purple-table-block-color: rgba(185, 103, 199, 0.5);
+    --purple-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --purple-middle-color: #a3a2aa;
+    /* blue */
+    --blue-base-color: #fff5e3;
+    --blue-main-color: #02a8f3;
+    --blue-accent-color: #ff3f80;
+    --blue-text-color: #464e70;
+    --blue-code-block-color: #393c41;
+    --blue-table-block-color: rgba(2, 168, 243, 0.5);
+    --blue-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --blue-middle-color: #a3a2aa;
+    /* cyan */
+    --cyan-base-color: #fff5e3;
+    --cyan-main-color: #00bbd3;
+    --cyan-accent-color: #ff5151;
+    --cyan-text-color: #464e70;
+    --cyan-code-block-color: #393c41;
+    --cyan-table-block-color: rgba(0, 187, 211, 0.5);
+    --cyan-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --cyan-middle-color: #a3a2aa;
+    /* yellow */
+    --yellow-base-color: #fff5e3;
+    --yellow-main-color: #ff9000;
+    --yellow-accent-color: #b967c7;
+    --yellow-text-color: #464e70;
+    --yellow-code-block-color: #393c41;
+    --yellow-table-block-color: rgba(255, 144, 0, 0.5);
+    --yellow-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --yellow-middle-color: #a3a2aa;
+    /* pink */
+    --pink-base-color: #fff5e3;
+    --pink-main-color: #ff3f80;
+    --pink-accent-color: #02a8f3;
+    --pink-text-color: #464e70;
+    --pink-code-block-color: #393c41;
+    --pink-table-block-color: rgba(255, 63, 128, 0.5);
+    --pink-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --pink-middle-color: #a3a2aa;
+    /* red */
+    --red-base-color: #fff5e3;
+    --red-main-color: #ff5151;
+    --red-accent-color: #00bbd3;
+    --red-text-color: #464e70;
+    --red-code-block-color: #393c41;
+    --red-table-block-color: rgba(255, 81, 81, 0.5);
+    --red-table-block-invert-color: rgba(255, 245, 227, 0.5);
+    --red-middle-color: #a3a2aa;
+}
+
+/* 共通 */
+
+svg[data-marp-fitting="svg"] {
+    max-height: 580px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: var(--heading-tags-line-spacing) 0 0 0;
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+p,
+blockquote {
+    margin: 1em 0 0 0;
+}
+
+ul>li,
+ol>li {
+    margin: 0.3em 0 0 0;
+}
+
+ul>li>p,
+ol>li>p {
+    margin: 0.6em 0 0 0;
+}
+
+code {
+    display: inline-block;
+    font-family: var(--code-font);
+    font-size: 0.8em;
+    letter-spacing: 0;
+    margin: -0.1em 0.15em;
+    padding: 0.1em 0.2em;
+    vertical-align: baseline;
+}
+
+pre {
+    display: block;
+    margin: 1em 0 0 0;
+    min-height: 1em;
+    overflow: visible;
+}
+
+pre code {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 100%;
+    padding: 0.5em;
+    font-size: 0.7em;
+}
+
+pre code svg[data-marp-fitting="svg"] {
+    max-height: calc(580px - 1em);
+}
+
+blockquote {
+    margin: 1em 0 0 0;
+    padding: 0 1em;
+    position: relative;
+}
+
+blockquote::after,
+blockquote::before {
+    content: "“";
+    display: block;
+    font-family: var(--quote-font);
+    font-weight: bold;
+    position: absolute;
+}
+
+blockquote::before {
+    top: -0.2em;
+    left: 0;
+}
+
+blockquote::after {
+    right: 0;
+    bottom: -0.2em;
+    transform: rotate(180deg);
+}
+
+blockquote>*:first-child {
+    margin-top: 0;
+}
+
+mark {
+    background: transparent;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1em 0 0 0;
+}
+
+table th,
+table td {
+    padding: 0.2em 0.4em;
+    border-width: 1px;
+    border-style: solid;
+}
+
+section {
+    font-size: var(--font-size);
+    font-family: var(--text-font);
+    line-height: 1.35;
+    letter-spacing: 1.25px;
+    padding: var(--heading-upper-spacing) 70px;
+    color: var(--light-text-color);
+    background-color: var(--light-base-color);
+}
+
+section>*:first-child,
+section>header:first-child+* {
+    margin-top: 0;
+}
+
+section a,
+section mark {
+    color: var(--light-accent-color);
+}
+
+section highlight {
+    background: var(--light-accent-color);
+}
+
+section underline {
+    text-decoration: underline;
+    text-decoration-color: var(--light-accent-color);
+}
+
+section sup a {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+section hr {
+    background: var(--light-middle-color);
+}
+
+section code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+    color: var(--light-accent-color);
+}
+
+section h1 img,
+section h2 img,
+section h3 img,
+section h4 img,
+section h5 img,
+section h6 img {
+    display: block;
+    margin: auto;
+}
+
+section pre>code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+    color: var(--light-middle-color);
+}
+
+section table th,
+section table td {
+    border-color: var(--light-text-color);
+}
+
+section table thead th {
+    background: var(--light-text-color);
+    color: var(--light-base-color);
+}
+
+section table tbody>tr:nth-child(odd) td,
+section table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-color);
+}
+
+header,
+footer,
+section::after {
+    box-sizing: border-box;
+    font-size: 66%;
+    height: 70px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 10px 25px;
+    position: absolute;
+}
+
+header {
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section::after {
+    right: 0;
+    bottom: 0;
+    font-size: 80%;
+}
+
+/* 2段組み */
+
+section.column {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+        "Heading Heading"
+        "LeftSide RightSide";
+}
+
+section.column h1 {
+    grid-area: Heading;
+    margin: 0;
+}
+
+section.column .left {
+    grid-area: LeftSide;
+    margin: 0;
+}
+
+section.column .right {
+    grid-area: RightSide;
+    margin: 0;
+}
+
+/* タイトル */
+
+section.title {
+    padding: 0 70px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 180px 120px 180px 60px;
+    grid-template-areas:
+        "."
+        "Title"
+        "Subtitle"
+        "Name"
+        ".";
+}
+
+section.title h1 {
+    grid-area: Title;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: var(--title-font);
+    font-size: 2.4em;
+}
+
+section.title h2 {
+    grid-area: Subtitle;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: var(--title-font);
+    font-size: 1.3em;
+}
+
+section.title h3 {
+    grid-area: Name;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section.title header,
+section.title footer {
+    display: none;
+}
+
+/* セクション */
+
+section.heading {
+    padding: 0 70px;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 180px 30px 150px 180px;
+    grid-template-areas:
+        "."
+        "Section"
+        "."
+        "Subsection"
+        ".";
+}
+
+section.heading h1 {
+    grid-area: Section;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section.heading h2 {
+    grid-area: Subsection;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* 見出し固定 */
+
+/* section.black h1,
+section.blue h1,
+section.green h1 {
+    margin: calc(-1 * var(--heading-upper-spacing)) -70px calc(var(--heading-tags-line-spacing) * (1.5 / 1.8));
+    padding-top: var(--heading-upper-spacing);
+    padding-left: 70px;
+}
+
+section.black.column h2,
+section.blue.column h2,
+section.green.column h2 {
+    margin: 0;
+    padding: 0;
+}
+
+section.black.title h1,
+section.blue.title h1,
+section.green.title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section.black.heading h1,
+section.blue.heading h1,
+section.green.heading h1 {
+    margin: 0;
+    padding: 0;
+} */
+
+/* 中央寄せ */
+
+section.lead:not(.column) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+/* section.black.lead h1,
+section.blue.lead h1,
+section.green.lead h1 {
+    padding-left: 0;
+}
+
+section.black.lead:not(.column):not(.title):not(.heading) h1,
+section.blue.lead:not(.column):not(.title):not(.heading) h1,
+section.green.lead:not(.column):not(.title):not(.heading) h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+}
+
+section.black.lead:not(.column):not(.title):not(.heading) header,
+section.blue.lead:not(.column):not(.title):not(.heading) header,
+section.green.lead:not(.column):not(.title):not(.heading) header {
+    z-index: 1;
+} */
+
+section.lead h1,
+section.lead h2,
+section.lead h3,
+section.lead h4,
+section.lead h5,
+section.lead h6,
+section.lead p {
+    text-align: center;
+    justify-content: center;
+}
+
+section.lead h1 svg[data-marp-fitting='svg'],
+section.lead h2 svg[data-marp-fitting='svg'],
+section.lead h3 svg[data-marp-fitting='svg'],
+section.lead h4 svg[data-marp-fitting='svg'],
+section.lead h5 svg[data-marp-fitting='svg'],
+section.lead h6 svg[data-marp-fitting='svg'] {
+    --preserve-aspect-ratio: xMidYMid meet;
+}
+
+section.lead blockquote>h1,
+section.lead blockquote>h2,
+section.lead blockquote>h3,
+section.lead blockquote>h4,
+section.lead blockquote>h5,
+section.lead blockquote>h6,
+section.lead blockquote>p {
+    text-align: left;
+}
+
+section.lead blockquote svg[data-marp-fitting='svg']:not([data-marp-fitting-math]) {
+    --preserve-aspect-ratio: xMinYMin meet;
+}
+
+section.lead ul>li>p,
+section.lead ol>li>p {
+    text-align: left;
+}
+
+section.lead table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 反転 */
+
+section.invert {
+    color: var(--light-base-color);
+    background-color: var(--light-text-color);
+}
+
+section.invert sup a {
+    color: var(--light-base-color);
+}
+
+section.invert table th,
+section.invert table td {
+    border-color: var(--light-base-color);
+}
+
+section.invert table thead th {
+    background: var(--light-base-color);
+    color: var(--light-text-color);
+}
+
+section.invert table tbody>tr:nth-child(odd) td,
+section.invert table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-invert-color);
+}
+
+/* light */
+
+section.light {
+    color: var(--light-text-color);
+    background-color: var(--light-base-color);
+}
+
+section.light a,
+section.light mark {
+    color: var(--light-accent-color);
+}
+
+section.light highlight {
+    background: var(--light-accent-color);
+}
+
+section.light underline {
+    text-decoration-color: var(--light-accent-color);
+}
+
+section.light sup a {
+    color: var(--light-text-color);
+}
+
+section.light hr {
+    background: var(--light-middle-color);
+}
+
+section.light code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section.light h1 strong,
+section.light h2 strong,
+section.light h3 strong,
+section.light h4 strong,
+section.light h5 strong,
+section.light h6 strong {
+    color: var(--light-accent-color);
+}
+
+section.light pre>code {
+    background: var(--light-code-block-color);
+    color: var(--light-text-color);
+}
+
+section.light header,
+section.light footer,
+section.light section::after,
+section.light blockquote::before,
+section.light blockquote::after {
+    color: var(--light-middle-color);
+}
+
+section.light table th,
+section.light table td {
+    border-color: var(--light-text-color);
+}
+
+section.light table thead th {
+    background: var(--light-main-color);
+    color: var(--light-base-color);
+}
+
+section.light table tbody>tr:nth-child(odd) td,
+section.light table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-color);
+}
+
+/* light invert */
+
+section.light.invert {
+    color: var(--light-base-color);
+    background-color: var(--light-main-color);
+}
+
+section.light.invert sup a {
+    color: var(--light-base-color);
+}
+
+section.light.invert table th,
+section.light.invert table td {
+    border-color: var(--light-base-color);
+}
+
+section.light.invert table thead th {
+    background: var(--light-base-color);
+    color: var(--light-main-color);
+}
+
+section.light.invert table tbody>tr:nth-child(odd) td,
+section.light.invert table tbody>tr:nth-child(odd) th {
+    background: var(--light-table-block-invert-color);
+}
+
+/* dark */
+
+section.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-base-color);
+}
+
+section.dark a,
+section.dark mark {
+    color: var(--dark-accent-color);
+}
+
+section.dark highlight {
+    background: var(--dark-accent-color);
+}
+
+section.dark underline {
+    text-decoration-color: var(--dark-accent-color);
+}
+
+section.dark sup a {
+    color: var(--dark-text-color);
+}
+
+section.dark hr {
+    background: var(--dark-middle-color);
+}
+
+section.dark code {
+    background: var(--dark-code-block-color);
+    color: var(--dark-text-color);
+}
+
+section.dark h1 strong,
+section.dark h2 strong,
+section.dark h3 strong,
+section.dark h4 strong,
+section.dark h5 strong,
+section.dark h6 strong {
+    color: var(--dark-accent-color);
+}
+
+section.dark pre>code {
+    background: var(--dark-code-block-color);
+    color: var(--dark-text-color);
+}
+
+section.dark header,
+section.dark footer,
+section.dark section::after,
+section.dark blockquote::before,
+section.dark blockquote::after {
+    color: var(--dark-middle-color);
+}
+
+section.dark table th,
+section.dark table td {
+    border-color: var(--dark-text-color);
+}
+
+section.dark table thead th {
+    background: var(--dark-main-color);
+    color: var(--dark-base-color);
+}
+
+section.dark table tbody>tr:nth-child(odd) td,
+section.dark table tbody>tr:nth-child(odd) th {
+    background: var(--dark-table-block-color);
+}
+
+/* dark invert */
+
+section.dark.invert {
+    color: var(--dark-base-color);
+    background-color: var(--dark-main-color);
+}
+
+section.dark.invert sup a {
+    color: var(--dark-base-color);
+}
+
+section.dark.invert table th,
+section.dark.invert table td {
+    border-color: var(--dark-base-color);
+}
+
+section.dark.invert table thead th {
+    background: var(--dark-base-color);
+    color: var(--dark-main-color);
+}
+
+section.dark.invert table tbody>tr:nth-child(odd) td,
+section.dark.invert table tbody>tr:nth-child(odd) th {
+    background: var(--dark-table-block-invert-color);
+}
+
+/* green */
+
+section.green {
+    color: var(--green-text-color);
+    background-color: var(--green-base-color);
+}
+
+section.green a,
+section.green mark {
+    color: var(--green-accent-color);
+}
+
+section.green highlight {
+    background: var(--green-accent-color);
+}
+
+section.green underline {
+    text-decoration-color: var(--green-accent-color);
+}
+
+section.green sup a {
+    color: var(--green-text-color);
+}
+
+section.green hr {
+    background: var(--green-middle-color);
+}
+
+section.green code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
+}
+
+section.green h1 strong,
+section.green h2 strong,
+section.green h3 strong,
+section.green h4 strong,
+section.green h5 strong,
+section.green h6 strong {
+    color: var(--green-accent-color);
+}
+
+section.green pre>code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
+}
+
+section.green header,
+section.green footer,
+section.green section::after,
+section.green blockquote::before,
+section.green blockquote::after {
+    color: var(--green-middle-color);
+}
+
+section.green table th,
+section.green table td {
+    border-color: var(--green-text-color);
+}
+
+section.green table thead th {
+    background: var(--green-main-color);
+    color: var(--green-base-color);
+}
+
+section.green table tbody>tr:nth-child(odd) td,
+section.green table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-color);
+}
+
+section.green:not(.title):not(.heading) h1 {
+    color: var(--green-main-color);
+}
+
+section.green.title,
+section.green.heading {
+    color: var(--green-base-color);
+    background-color: var(--green-main-color);
+}
+
+/* green invert */
+
+section.green.invert {
+    color: var(--green-base-color);
+    background-color: var(--green-main-color);
+}
+
+section.green.invert sup a {
+    color: var(--green-base-color);
+}
+
+section.green.invert table th,
+section.green.invert table td {
+    border-color: var(--green-base-color);
+}
+
+section.green.invert table thead th {
+    background: var(--green-base-color);
+    color: var(--green-main-color);
+}
+
+section.green.invert table tbody>tr:nth-child(odd) td,
+section.green.invert table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-invert-color);
+}
+
+section.green.invert:not(.title):not(.heading) h1 {
+    color: var(--green-text-color);
+}
+
+section.green.title.invert,
+section.green.heading.invert {
+    color: var(--green-main-color);
+    background-color: var(--green-base-color);
+}
+
+/* black */
+
+section.black {
+    color: var(--black-text-color);
+    background-color: var(--black-base-color);
+}
+
+section.black a,
+section.black mark {
+    color: var(--black-accent-color);
+}
+
+section.black highlight {
+    background: var(--black-accent-color);
+}
+
+section.black underline {
+    text-decoration-color: var(--black-accent-color);
+}
+
+section.black sup a {
+    color: var(--black-text-color);
+}
+
+section.black hr {
+    background: var(--black-middle-color);
+}
+
+section.black code {
+    background: var(--black-code-block-color);
+    color: var(--black-text-color);
+}
+
+section.black h1 strong,
+section.black h2 strong,
+section.black h3 strong,
+section.black h4 strong,
+section.black h5 strong,
+section.black h6 strong {
+    color: var(--black-accent-color);
+}
+
+section.black pre>code {
+    background: var(--black-code-block-color);
+    color: var(--black-text-color);
+}
+
+section.black header,
+section.black footer,
+section.black section::after,
+section.black blockquote::before,
+section.black blockquote::after {
+    color: var(--black-middle-color);
+}
+
+section.black table th,
+section.black table td {
+    border-color: var(--black-text-color);
+}
+
+section.black table thead th {
+    background: var(--black-main-color);
+    color: var(--black-base-color);
+}
+
+section.black table tbody>tr:nth-child(odd) td,
+section.black table tbody>tr:nth-child(odd) th {
+    background: var(--black-table-block-color);
+}
+
+section.black:not(.title):not(.heading) h1 {
+    color: var(--black-main-color);
+}
+
+section.black.title,
+section.black.heading {
+    color: var(--black-base-color);
+    background-color: var(--black-main-color);
+}
+
+/* black invert */
+
+section.black.invert {
+    color: var(--black-base-color);
+    background-color: var(--black-main-color);
+}
+
+section.black.invert sup a {
+    color: var(--black-base-color);
+}
+
+section.black.invert table th,
+section.black.invert table td {
+    border-color: var(--black-base-color);
+}
+
+section.black.invert table thead th {
+    background: var(--black-base-color);
+    color: var(--black-main-color);
+}
+
+section.black.invert table tbody>tr:nth-child(odd) td,
+section.black.invert table tbody>tr:nth-child(odd) th {
+    background: var(--black-table-block-invert-color);
+}
+
+section.black.invert:not(.title):not(.heading) h1 {
+    color: var(--black-base-color);
+}
+
+section.black.title.invert,
+section.black.heading.invert {
+    color: var(--black-main-color);
+    background-color: var(--black-base-color);
+}
+
+/* purple */
+
+section.purple {
+    color: var(--purple-text-color);
+    background-color: var(--purple-base-color);
+}
+
+section.purple a,
+section.purple mark {
+    color: var(--purple-accent-color);
+}
+
+section.purple highlight {
+    background: var(--purple-accent-color);
+}
+
+section.purple underline {
+    text-decoration-color: var(--purple-accent-color);
+}
+
+section.purple sup a {
+    color: var(--purple-text-color);
+}
+
+section.purple hr {
+    background: var(--purple-middle-color);
+}
+
+section.purple code {
+    background: var(--purple-code-block-color);
+    color: var(--purple-text-color);
+}
+
+section.purple h1 strong,
+section.purple h2 strong,
+section.purple h3 strong,
+section.purple h4 strong,
+section.purple h5 strong,
+section.purple h6 strong {
+    color: var(--purple-accent-color);
+}
+
+section.purple pre>code {
+    background: var(--purple-code-block-color);
+    color: var(--purple-text-color);
+}
+
+section.purple header,
+section.purple footer,
+section.purple section::after,
+section.purple blockquote::before,
+section.purple blockquote::after {
+    color: var(--purple-middle-color);
+}
+
+section.purple table th,
+section.purple table td {
+    border-color: var(--purple-text-color);
+}
+
+section.purple table thead th {
+    background: var(--purple-main-color);
+    color: var(--purple-base-color);
+}
+
+section.purple table tbody>tr:nth-child(odd) td,
+section.purple table tbody>tr:nth-child(odd) th {
+    background: var(--purple-table-block-color);
+}
+
+section.purple:not(.title):not(.heading) h1 {
+    color: var(--purple-main-color);
+}
+
+section.purple.title,
+section.purple.heading {
+    color: var(--purple-base-color);
+    background-color: var(--purple-main-color);
+}
+
+/* purple invert */
+
+section.purple.invert {
+    color: var(--purple-base-color);
+    background-color: var(--purple-main-color);
+}
+
+section.purple.invert sup a {
+    color: var(--purple-base-color);
+}
+
+section.purple.invert table th,
+section.purple.invert table td {
+    border-color: var(--purple-base-color);
+}
+
+section.purple.invert table thead th {
+    background: var(--purple-base-color);
+    color: var(--purple-main-color);
+}
+
+section.purple.invert table tbody>tr:nth-child(odd) td,
+section.purple.invert table tbody>tr:nth-child(odd) th {
+    background: var(--purple-table-block-invert-color);
+}
+
+section.purple.invert:not(.title):not(.heading) h1 {
+    color: var(--purple-text-color);
+}
+
+section.purple.title.invert,
+section.purple.heading.invert {
+    color: var(--purple-main-color);
+    background-color: var(--purple-base-color);
+}
+
+/* blue */
+
+section.blue {
+    color: var(--blue-text-color);
+    background-color: var(--blue-base-color);
+}
+
+section.blue a,
+section.blue mark {
+    color: var(--blue-accent-color);
+}
+
+section.blue highlight {
+    background: var(--blue-accent-color);
+}
+
+section.blue underline {
+    text-decoration-color: var(--blue-accent-color);
+}
+
+section.blue sup a {
+    color: var(--blue-text-color);
+}
+
+section.blue hr {
+    background: var(--blue-middle-color);
+}
+
+section.blue code {
+    background: var(--blue-code-block-color);
+    color: var(--blue-text-color);
+}
+
+section.blue h1 strong,
+section.blue h2 strong,
+section.blue h3 strong,
+section.blue h4 strong,
+section.blue h5 strong,
+section.blue h6 strong {
+    color: var(--blue-accent-color);
+}
+
+section.blue pre>code {
+    background: var(--blue-code-block-color);
+    color: var(--blue-text-color);
+}
+
+section.blue header,
+section.blue footer,
+section.blue section::after,
+section.blue blockquote::before,
+section.blue blockquote::after {
+    color: var(--blue-middle-color);
+}
+
+section.blue table th,
+section.blue table td {
+    border-color: var(--blue-text-color);
+}
+
+section.blue table thead th {
+    background: var(--blue-main-color);
+    color: var(--blue-base-color);
+}
+
+section.blue table tbody>tr:nth-child(odd) td,
+section.blue table tbody>tr:nth-child(odd) th {
+    background: var(--blue-table-block-color);
+}
+
+section.blue:not(.title):not(.heading) h1 {
+    color: var(--blue-main-color);
+}
+
+section.blue.title,
+section.blue.heading {
+    color: var(--blue-base-color);
+    background-color: var(--blue-main-color);
+}
+
+/* blue invert */
+
+section.blue.invert {
+    color: var(--blue-base-color);
+    background-color: var(--blue-main-color);
+}
+
+section.blue.invert sup a {
+    color: var(--blue-base-color);
+}
+
+section.blue.invert table th,
+section.blue.invert table td {
+    border-color: var(--blue-base-color);
+}
+
+section.blue.invert table thead th {
+    background: var(--blue-base-color);
+    color: var(--blue-main-color);
+}
+
+section.blue.invert table tbody>tr:nth-child(odd) td,
+section.blue.invert table tbody>tr:nth-child(odd) th {
+    background: var(--blue-table-block-invert-color);
+}
+
+section.blue.invert:not(.title):not(.heading) h1 {
+    color: var(--blue-text-color);
+}
+
+section.blue.title.invert,
+section.blue.heading.invert {
+    color: var(--blue-main-color);
+    background-color: var(--blue-base-color);
+}
+
+/* cyan */
+
+section.cyan {
+    color: var(--cyan-text-color);
+    background-color: var(--cyan-base-color);
+}
+
+section.cyan a,
+section.cyan mark {
+    color: var(--cyan-accent-color);
+}
+
+section.cyan highlight {
+    background: var(--cyan-accent-color);
+}
+
+section.cyan underline {
+    text-decoration-color: var(--cyan-accent-color);
+}
+
+section.cyan sup a {
+    color: var(--cyan-text-color);
+}
+
+section.cyan hr {
+    background: var(--cyan-middle-color);
+}
+
+section.cyan code {
+    background: var(--cyan-code-block-color);
+    color: var(--cyan-text-color);
+}
+
+section.cyan h1 strong,
+section.cyan h2 strong,
+section.cyan h3 strong,
+section.cyan h4 strong,
+section.cyan h5 strong,
+section.cyan h6 strong {
+    color: var(--cyan-accent-color);
+}
+
+section.cyan pre>code {
+    background: var(--cyan-code-block-color);
+    color: var(--cyan-text-color);
+}
+
+section.cyan header,
+section.cyan footer,
+section.cyan section::after,
+section.cyan blockquote::before,
+section.cyan blockquote::after {
+    color: var(--cyan-middle-color);
+}
+
+section.cyan table th,
+section.cyan table td {
+    border-color: var(--cyan-text-color);
+}
+
+section.cyan table thead th {
+    background: var(--cyan-main-color);
+    color: var(--cyan-base-color);
+}
+
+section.cyan table tbody>tr:nth-child(odd) td,
+section.cyan table tbody>tr:nth-child(odd) th {
+    background: var(--cyan-table-block-color);
+}
+
+section.cyan:not(.title):not(.heading) h1 {
+    color: var(--cyan-main-color);
+}
+
+section.cyan.title,
+section.cyan.heading {
+    color: var(--cyan-base-color);
+    background-color: var(--cyan-main-color);
+}
+
+/* cyan invert */
+
+section.cyan.invert {
+    color: var(--cyan-base-color);
+    background-color: var(--cyan-main-color);
+}
+
+section.cyan.invert sup a {
+    color: var(--cyan-base-color);
+}
+
+section.cyan.invert table th,
+section.cyan.invert table td {
+    border-color: var(--cyan-base-color);
+}
+
+section.cyan.invert table thead th {
+    background: var(--cyan-base-color);
+    color: var(--cyan-main-color);
+}
+
+section.cyan.invert table tbody>tr:nth-child(odd) td,
+section.cyan.invert table tbody>tr:nth-child(odd) th {
+    background: var(--cyan-table-block-invert-color);
+}
+
+section.cyan.invert:not(.title):not(.heading) h1 {
+    color: var(--cyan-text-color);
+}
+
+section.cyan.title.invert,
+section.cyan.heading.invert {
+    color: var(--cyan-main-color);
+    background-color: var(--cyan-base-color);
+}
+
+/* yellow */
+
+section.yellow {
+    color: var(--yellow-text-color);
+    background-color: var(--yellow-base-color);
+}
+
+section.yellow a,
+section.yellow mark {
+    color: var(--yellow-accent-color);
+}
+
+section.yellow highlight {
+    background: var(--yellow-accent-color);
+}
+
+section.yellow underline {
+    text-decoration-color: var(--yellow-accent-color);
+}
+
+section.yellow sup a {
+    color: var(--yellow-text-color);
+}
+
+section.yellow hr {
+    background: var(--yellow-middle-color);
+}
+
+section.yellow code {
+    background: var(--yellow-code-block-color);
+    color: var(--yellow-text-color);
+}
+
+section.yellow h1 strong,
+section.yellow h2 strong,
+section.yellow h3 strong,
+section.yellow h4 strong,
+section.yellow h5 strong,
+section.yellow h6 strong {
+    color: var(--yellow-accent-color);
+}
+
+section.yellow pre>code {
+    background: var(--yellow-code-block-color);
+    color: var(--yellow-text-color);
+}
+
+section.yellow header,
+section.yellow footer,
+section.yellow section::after,
+section.yellow blockquote::before,
+section.yellow blockquote::after {
+    color: var(--yellow-middle-color);
+}
+
+section.yellow table th,
+section.yellow table td {
+    border-color: var(--yellow-text-color);
+}
+
+section.yellow table thead th {
+    background: var(--yellow-main-color);
+    color: var(--yellow-base-color);
+}
+
+section.yellow table tbody>tr:nth-child(odd) td,
+section.yellow table tbody>tr:nth-child(odd) th {
+    background: var(--yellow-table-block-color);
+}
+
+section.yellow:not(.title):not(.heading) h1 {
+    color: var(--yellow-main-color);
+}
+
+section.yellow.title,
+section.yellow.heading {
+    color: var(--yellow-base-color);
+    background-color: var(--yellow-main-color);
+}
+
+/* yellow invert */
+
+section.yellow.invert {
+    color: var(--yellow-base-color);
+    background-color: var(--yellow-main-color);
+}
+
+section.yellow.invert sup a {
+    color: var(--yellow-base-color);
+}
+
+section.yellow.invert table th,
+section.yellow.invert table td {
+    border-color: var(--yellow-base-color);
+}
+
+section.yellow.invert table thead th {
+    background: var(--yellow-base-color);
+    color: var(--yellow-main-color);
+}
+
+section.yellow.invert table tbody>tr:nth-child(odd) td,
+section.yellow.invert table tbody>tr:nth-child(odd) th {
+    background: var(--yellow-table-block-invert-color);
+}
+
+section.yellow.invert:not(.title):not(.heading) h1 {
+    color: var(--yellow-text-color);
+}
+
+section.yellow.title.invert,
+section.yellow.heading.invert {
+    color: var(--yellow-main-color);
+    background-color: var(--yellow-base-color);
+}
+
+/* pink */
+
+section.pink {
+    color: var(--pink-text-color);
+    background-color: var(--pink-base-color);
+}
+
+section.pink a,
+section.pink mark {
+    color: var(--pink-accent-color);
+}
+
+section.pink highlight {
+    background: var(--pink-accent-color);
+}
+
+section.pink underline {
+    text-decoration-color: var(--pink-accent-color);
+}
+
+section.pink sup a {
+    color: var(--pink-text-color);
+}
+
+section.pink hr {
+    background: var(--pink-middle-color);
+}
+
+section.pink code {
+    background: var(--pink-code-block-color);
+    color: var(--pink-text-color);
+}
+
+section.pink h1 strong,
+section.pink h2 strong,
+section.pink h3 strong,
+section.pink h4 strong,
+section.pink h5 strong,
+section.pink h6 strong {
+    color: var(--pink-accent-color);
+}
+
+section.pink pre>code {
+    background: var(--pink-code-block-color);
+    color: var(--pink-text-color);
+}
+
+section.pink header,
+section.pink footer,
+section.pink section::after,
+section.pink blockquote::before,
+section.pink blockquote::after {
+    color: var(--pink-middle-color);
+}
+
+section.pink table th,
+section.pink table td {
+    border-color: var(--pink-text-color);
+}
+
+section.pink table thead th {
+    background: var(--pink-main-color);
+    color: var(--pink-base-color);
+}
+
+section.pink table tbody>tr:nth-child(odd) td,
+section.pink table tbody>tr:nth-child(odd) th {
+    background: var(--pink-table-block-color);
+}
+
+section.pink:not(.title):not(.heading) h1 {
+    color: var(--pink-main-color);
+}
+
+section.pink.title,
+section.pink.heading {
+    color: var(--pink-base-color);
+    background-color: var(--pink-main-color);
+}
+
+/* pink invert */
+
+section.pink.invert {
+    color: var(--pink-base-color);
+    background-color: var(--pink-main-color);
+}
+
+section.pink.invert sup a {
+    color: var(--pink-base-color);
+}
+
+section.pink.invert table th,
+section.pink.invert table td {
+    border-color: var(--pink-base-color);
+}
+
+section.pink.invert table thead th {
+    background: var(--pink-base-color);
+    color: var(--pink-main-color);
+}
+
+section.pink.invert table tbody>tr:nth-child(odd) td,
+section.pink.invert table tbody>tr:nth-child(odd) th {
+    background: var(--pink-table-block-invert-color);
+}
+
+section.pink.invert:not(.title):not(.heading) h1 {
+    color: var(--pink-text-color);
+}
+
+section.pink.title.invert,
+section.pink.heading.invert {
+    color: var(--pink-main-color);
+    background-color: var(--pink-base-color);
+}
+
+/* red */
+
+section.red {
+    color: var(--red-text-color);
+    background-color: var(--red-base-color);
+}
+
+section.red a,
+section.red mark {
+    color: var(--red-accent-color);
+}
+
+section.red highlight {
+    background: var(--red-accent-color);
+}
+
+section.red underline {
+    text-decoration-color: var(--red-accent-color);
+}
+
+section.red sup a {
+    color: var(--red-text-color);
+}
+
+section.red hr {
+    background: var(--red-middle-color);
+}
+
+section.red code {
+    background: var(--red-code-block-color);
+    color: var(--red-text-color);
+}
+
+section.red h1 strong,
+section.red h2 strong,
+section.red h3 strong,
+section.red h4 strong,
+section.red h5 strong,
+section.red h6 strong {
+    color: var(--red-accent-color);
+}
+
+section.red pre>code {
+    background: var(--red-code-block-color);
+    color: var(--red-text-color);
+}
+
+section.red header,
+section.red footer,
+section.red section::after,
+section.red blockquote::before,
+section.red blockquote::after {
+    color: var(--red-middle-color);
+}
+
+section.red table th,
+section.red table td {
+    border-color: var(--red-text-color);
+}
+
+section.red table thead th {
+    background: var(--red-main-color);
+    color: var(--red-base-color);
+}
+
+section.red table tbody>tr:nth-child(odd) td,
+section.red table tbody>tr:nth-child(odd) th {
+    background: var(--red-table-block-color);
+}
+
+section.red:not(.title):not(.heading) h1 {
+    color: var(--red-main-color);
+}
+
+section.red.title,
+section.red.heading {
+    color: var(--red-base-color);
+    background-color: var(--red-main-color);
+}
+
+/* red invert */
+
+section.red.invert {
+    color: var(--red-base-color);
+    background-color: var(--red-main-color);
+}
+
+section.red.invert sup a {
+    color: var(--red-base-color);
+}
+
+section.red.invert table th,
+section.red.invert table td {
+    border-color: var(--red-base-color);
+}
+
+section.red.invert table thead th {
+    background: var(--red-base-color);
+    color: var(--red-main-color);
+}
+
+section.red.invert table tbody>tr:nth-child(odd) td,
+section.red.invert table tbody>tr:nth-child(odd) th {
+    background: var(--red-table-block-invert-color);
+}
+
+section.red.invert:not(.title):not(.heading) h1 {
+    color: var(--red-text-color);
+}
+
+section.red.title.invert,
+section.red.heading.invert {
+    color: var(--red-main-color);
+    background-color: var(--red-base-color);
+}
