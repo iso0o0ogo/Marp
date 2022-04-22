@@ -373,6 +373,7 @@ section.title h1:nth-of-type(1) {
     justify-content: center;
     align-items: flex-end;
     font-family: var(--title-font);
+    font-size: 1.8em;
 }
 
 section.title h1:nth-of-type(2) {
