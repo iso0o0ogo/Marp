@@ -16,8 +16,8 @@
 
 :root {
     /* フォントサイズ, 余白, フォント */
-    --font-size: 28px;
-    --heading-tags-line-spacing: 0.8em;
+    --font-size: 35px;
+    --heading-tags-line-spacing: 0.5em;
     --heading-upper-spacing: 50px;
     --text-font: "Roboto", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
     --title-font: "Oswald", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
@@ -71,6 +71,10 @@
 }
 
 /* 共通 */
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+}
 
 svg[data-marp-fitting="svg"] {
     max-height: 580px;
@@ -200,6 +204,7 @@ table {
     border-spacing: 0;
     border-collapse: collapse;
     margin: 1em 0 0 0;
+    font-size: 80%;
 }
 
 table th,
@@ -224,16 +229,21 @@ section>header:first-child+* {
     margin-top: 0;
 }
 
-section a,
-section mark {
+section a {
     color: var(--light-accent-color);
 }
 
-section highlight {
-    background: var(--light-accent-color);
+section mark {
+    color: var(--light-text-color);
+    background: linear-gradient(transparent 40%, var(--light-accent-color) 80%);
 }
 
-section underline {
+section i {
+    font-style: normal;
+    color: var(--light-accent-color);
+}
+
+section u {
     text-decoration: underline;
     text-decoration-color: var(--light-accent-color);
 }
@@ -327,52 +337,35 @@ section::after {
     right: 0;
     bottom: 0;
     font-size: 80%;
+    content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
 }
 
-/* 2段組み */
-
-section.column {
+/* 段組み */
+.col {
     overflow: visible;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: min-content auto;
-    grid-template-areas:
-        "Heading Heading"
-        "LeftSide RightSide";
-}
-
-section.column h1 {
-    grid-area: Heading;
-    margin: 0;
-}
-
-section.column .left {
-    grid-area: LeftSide;
-    margin: 0;
-}
-
-section.column .right {
-    grid-area: RightSide;
-    margin: 0;
+    gap: 1rem;
 }
 
 /* タイトル */
-
 section.title {
     padding: 0 70px;
     overflow: visible;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 180px 180px 120px 180px 60px;
+    grid-template-rows: var(--heading-upper-spacing) calc(360px - var(--heading-upper-spacing)) 120px auto auto auto 70px;
     grid-template-areas:
         "."
         "Title"
         "Subtitle"
+        "Date"
+        "Affiliation"
         "Name"
         ".";
 }
 
-section.title h1 {
+section.title h1:nth-of-type(1) {
     grid-area: Title;
     margin: 0;
     text-align: center;
@@ -380,10 +373,9 @@ section.title h1 {
     justify-content: center;
     align-items: flex-end;
     font-family: var(--title-font);
-    font-size: 2.4em;
 }
 
-section.title h2 {
+section.title h1:nth-of-type(2) {
     grid-area: Subtitle;
     margin: 0;
     text-align: center;
@@ -391,16 +383,37 @@ section.title h2 {
     justify-content: center;
     align-items: flex-start;
     font-family: var(--title-font);
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
-section.title h3 {
+section.title h6:nth-of-type(1) {
+    grid-area: Date;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1em;
+}
+
+section.title h6:nth-of-type(2) {
+    grid-area: Affiliation;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1em;
+}
+
+section.title h6:nth-of-type(3) {
     grid-area: Name;
     margin: 0;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    font-size: 1em;
 }
 
 section.title header,
@@ -409,13 +422,12 @@ section.title footer {
 }
 
 /* セクション */
-
 section.heading {
     padding: 0 70px;
     overflow: visible;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 180px 180px 30px 150px 180px;
+    grid-template-rows: var(--heading-upper-spacing) calc(360px - var(--heading-upper-spacing)) 30px calc(330px - var(--heading-upper-spacing)) var(--heading-upper-spacing);
     grid-template-areas:
         "."
         "Section"
@@ -424,7 +436,7 @@ section.heading {
         ".";
 }
 
-section.heading h1 {
+section.heading h2:nth-of-type(1) {
     grid-area: Section;
     margin: 0;
     display: flex;
@@ -432,73 +444,40 @@ section.heading h1 {
     align-items: flex-end;
 }
 
-section.heading h2 {
+section.heading h2:nth-of-type(2) {
     grid-area: Subsection;
     margin: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    font-size: 1.2em;
 }
 
 /* 見出し固定 */
-
-section.black h1,
-section.blue h1,
-section.green h1 {
-    margin: calc(-1 * var(--heading-upper-spacing)) -70px calc(var(--heading-tags-line-spacing) * (1.5 / 1.8));
+section.black h2,
+section.blue h2,
+section.green h2 {
+    margin: calc(-1 * var(--heading-upper-spacing)) -70px 0;
     padding-top: var(--heading-upper-spacing);
     padding-left: 70px;
 }
 
-section.black.column h2,
-section.blue.column h2,
-section.green.column h2 {
-    margin: 0;
-    padding: 0;
-}
-
-section.black.title h1,
-section.blue.title h1,
-section.green.title h1 {
-    margin: 0;
-    padding: 0;
-}
-
-section.black.heading h1,
-section.blue.heading h1,
-section.green.heading h1 {
+section.black.title h2,
+section.blue.title h2,
+section.green.title h2,
+section.black.heading h2,
+section.blue.heading h2,
+section.green.heading h2 {
     margin: 0;
     padding: 0;
 }
 
 /* 中央寄せ */
-
-section.lead:not(.column) {
+section.lead {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-}
-
-section.black.lead h1,
-section.blue.lead h1,
-section.green.lead h1 {
-    padding-left: 0;
-}
-
-section.black.lead:not(.column):not(.title):not(.heading) h1,
-section.blue.lead:not(.column):not(.title):not(.heading) h1,
-section.green.lead:not(.column):not(.title):not(.heading) h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
-}
-
-section.black.lead:not(.column):not(.title):not(.heading) header,
-section.blue.lead:not(.column):not(.title):not(.heading) header,
-section.green.lead:not(.column):not(.title):not(.heading) header {
-    z-index: 1;
 }
 
 section.lead h1,
@@ -546,12 +525,12 @@ section.lead table {
 }
 
 /* 反転 */
-
 section.invert {
     color: var(--light-base-color);
     background-color: var(--light-text-color);
 }
 
+section.invert mark,
 section.invert sup a {
     color: var(--light-base-color);
 }
@@ -572,22 +551,25 @@ section.invert table tbody>tr:nth-child(odd) th {
 }
 
 /* light */
-
 section.light {
     color: var(--light-text-color);
     background-color: var(--light-base-color);
 }
 
-section.light a,
-section.light mark {
+section.light a {
     color: var(--light-accent-color);
 }
 
-section.light highlight {
-    background: var(--light-accent-color);
+section.light mark {
+    color: var(--light-text-color);
+    background: linear-gradient(transparent 40%, var(--light-accent-color) 80%);
 }
 
-section.light underline {
+section.light i {
+    color: var(--light-accent-color);
+}
+
+section.light u {
     text-decoration-color: var(--light-accent-color);
 }
 
@@ -642,12 +624,12 @@ section.light table tbody>tr:nth-child(odd) th {
 }
 
 /* light invert */
-
 section.light.invert {
     color: var(--light-base-color);
     background-color: var(--light-main-color);
 }
 
+section.light.invert mark,
 section.light.invert sup a {
     color: var(--light-base-color);
 }
@@ -668,22 +650,25 @@ section.light.invert table tbody>tr:nth-child(odd) th {
 }
 
 /* dark */
-
 section.dark {
     color: var(--dark-text-color);
     background-color: var(--dark-base-color);
 }
 
-section.dark a,
-section.dark mark {
+section.dark a {
     color: var(--dark-accent-color);
 }
 
-section.dark highlight {
-    background: var(--dark-accent-color);
+section.dark mark {
+    color: var(--dark-text-color);
+    background: linear-gradient(transparent 40%, var(--dark-accent-color) 80%);
 }
 
-section.dark underline {
+section.dark i {
+    color: var(--dark-accent-color);
+}
+
+section.dark u {
     text-decoration-color: var(--dark-accent-color);
 }
 
@@ -738,12 +723,12 @@ section.dark table tbody>tr:nth-child(odd) th {
 }
 
 /* dark invert */
-
 section.dark.invert {
     color: var(--dark-base-color);
     background-color: var(--dark-main-color);
 }
 
+section.dark.invert mark,
 section.dark.invert sup a {
     color: var(--dark-base-color);
 }
@@ -764,22 +749,25 @@ section.dark.invert table tbody>tr:nth-child(odd) th {
 }
 
 /* black */
-
 section.black {
     color: var(--black-text-color);
     background-color: var(--black-base-color);
 }
 
-section.black a,
-section.black mark {
+section.black a {
     color: var(--black-accent-color);
 }
 
-section.black highlight {
-    background: var(--black-accent-color);
+section.black mark {
+    color: var(--black-text-color);
+    background: linear-gradient(transparent 40%, var(--black-accent-color) 80%);
 }
 
-section.black underline {
+section.black i {
+    color: var(--black-accent-color);
+}
+
+section.black u {
     text-decoration-color: var(--black-accent-color);
 }
 
@@ -833,7 +821,7 @@ section.black table tbody>tr:nth-child(odd) th {
     background: var(--black-table-block-color);
 }
 
-section.black h1,
+section.black h2,
 section.black.title,
 section.black.heading {
     color: var(--black-base-color);
@@ -841,12 +829,12 @@ section.black.heading {
 }
 
 /* black invert */
-
 section.black.invert {
     color: var(--black-base-color);
     background-color: var(--black-main-color);
 }
 
+section.black.invert mark,
 section.black.invert sup a {
     color: var(--black-base-color);
 }
@@ -866,7 +854,7 @@ section.black.invert table tbody>tr:nth-child(odd) th {
     background: var(--black-table-block-invert-color);
 }
 
-section.black.invert h1,
+section.black.invert h2,
 section.black.title.invert,
 section.black.heading.invert {
     color: var(--black-main-color);
@@ -874,22 +862,25 @@ section.black.heading.invert {
 }
 
 /* blue */
-
 section.blue {
     color: var(--blue-text-color);
     background-color: var(--blue-base-color);
 }
 
-section.blue a,
-section.blue mark {
+section.blue a {
     color: var(--blue-accent-color);
 }
 
-section.blue highlight {
-    background: var(--blue-accent-color);
+section.blue mark {
+    color: var(--blue-text-color);
+    background: linear-gradient(transparent 40%, var(--blue-accent-color) 80%);
 }
 
-section.blue underline {
+section.blue i {
+    color: var(--blue-accent-color);
+}
+
+section.blue u {
     text-decoration-color: var(--blue-accent-color);
 }
 
@@ -943,7 +934,7 @@ section.blue table tbody>tr:nth-child(odd) th {
     background: var(--blue-table-block-color);
 }
 
-section.blue h1,
+section.blue h2,
 section.blue.title,
 section.blue.heading {
     color: var(--blue-base-color);
@@ -951,12 +942,12 @@ section.blue.heading {
 }
 
 /* blue invert */
-
 section.blue.invert {
     color: var(--blue-base-color);
     background-color: var(--blue-main-color);
 }
 
+section.blue.invert mark,
 section.blue.invert sup a {
     color: var(--blue-base-color);
 }
@@ -976,7 +967,7 @@ section.blue.invert table tbody>tr:nth-child(odd) th {
     background: var(--blue-table-block-invert-color);
 }
 
-section.blue.invert h1,
+section.blue.invert h2,
 section.blue.title.invert,
 section.blue.heading.invert {
     color: var(--blue-main-color);
@@ -984,22 +975,25 @@ section.blue.heading.invert {
 }
 
 /* green */
-
 section.green {
     color: var(--green-text-color);
     background-color: var(--green-base-color);
 }
 
-section.green a,
-section.green mark {
+section.green a {
     color: var(--green-accent-color);
 }
 
-section.green highlight {
-    background: var(--green-accent-color);
+section.green mark {
+    color: var(--green-text-color);
+    background: linear-gradient(transparent 40%, var(--green-accent-color) 80%);
 }
 
-section.green underline {
+section.green i {
+    color: var(--green-accent-color);
+}
+
+section.green u {
     text-decoration-color: var(--green-accent-color);
 }
 
@@ -1053,7 +1047,7 @@ section.green table tbody>tr:nth-child(odd) th {
     background: var(--green-table-block-color);
 }
 
-section.green h1,
+section.green h2,
 section.green.title,
 section.green.heading {
     color: var(--green-base-color);
@@ -1061,12 +1055,12 @@ section.green.heading {
 }
 
 /* green invert */
-
 section.green.invert {
     color: var(--green-base-color);
     background-color: var(--green-main-color);
 }
 
+section.green.invert mark,
 section.green.invert sup a {
     color: var(--green-base-color);
 }
@@ -1086,7 +1080,7 @@ section.green.invert table tbody>tr:nth-child(odd) th {
     background: var(--green-table-block-invert-color);
 }
 
-section.green.invert h1,
+section.green.invert h2,
 section.green.title.invert,
 section.green.heading.invert {
     color: var(--green-main-color);
