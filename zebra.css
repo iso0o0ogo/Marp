@@ -354,7 +354,7 @@ section.title {
     overflow: visible;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: var(--heading-upper-spacing) calc(360px - var(--heading-upper-spacing)) 120px auto auto auto 70px;
+    grid-template-rows: 70px 250px 120px 70px 70px 70px 70px;
     grid-template-areas:
         "."
         "Title"
