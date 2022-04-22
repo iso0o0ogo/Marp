@@ -373,7 +373,6 @@ section.title h1:nth-of-type(1) {
     justify-content: center;
     align-items: flex-end;
     font-family: var(--title-font);
-    font-size: 1.8em;
 }
 
 section.title h1:nth-of-type(2) {
@@ -428,7 +427,7 @@ section.heading {
     overflow: visible;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: var(--heading-upper-spacing) calc(360px - var(--heading-upper-spacing)) 30px calc(330px - var(--heading-upper-spacing)) var(--heading-upper-spacing);
+    grid-template-rows: 70px 250px 30px 300px 70px;
     grid-template-areas:
         "."
         "Section"
