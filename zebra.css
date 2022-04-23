@@ -71,6 +71,11 @@
 }
 
 /* 共通 */
+
+mb5 {
+    margin-bottom: 3rem;
+}
+
 img[alt~="center"] {
     display: block;
     margin: 0 auto;
