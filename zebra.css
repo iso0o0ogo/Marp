@@ -71,11 +71,6 @@
 }
 
 /* 共通 */
-
-mb5 {
-    margin-bottom: 3rem;
-}
-
 img[alt~="center"] {
     display: block;
     margin: 0 auto;
@@ -262,10 +257,6 @@ section hr {
     background: var(--light-middle-color);
 }
 
-section small {
-    overflow-wrap: break-word;
-}
-
 section code {
     background: var(--light-code-block-color);
     color: var(--light-text-color);
@@ -349,6 +340,30 @@ section::after {
     content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
 }
 
+p.mb-0 {
+    margin-bottom: 0;
+}
+
+p.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+p.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+p.mb-3 {
+    margin-bottom: 1rem;
+}
+
+p.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+p.mb-5 {
+    margin-bottom: 3rem;
+}
+
 /* 段組み */
 .col {
     overflow: visible;
@@ -368,9 +383,9 @@ section.title {
         "."
         "Title"
         "Subtitle"
-        "Date"
         "Affiliation"
         "Name"
+        "Date"
         ".";
 }
 
@@ -396,16 +411,6 @@ section.title h1:nth-of-type(2) {
 }
 
 section.title h6:nth-of-type(1) {
-    grid-area: Date;
-    margin: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 1em;
-}
-
-section.title h6:nth-of-type(2) {
     grid-area: Affiliation;
     margin: 0;
     text-align: center;
@@ -415,8 +420,18 @@ section.title h6:nth-of-type(2) {
     font-size: 1em;
 }
 
-section.title h6:nth-of-type(3) {
+section.title h6:nth-of-type(2) {
     grid-area: Name;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1em;
+}
+
+section.title h6:nth-of-type(3) {
+    grid-area: Date;
     margin: 0;
     text-align: center;
     display: flex;
