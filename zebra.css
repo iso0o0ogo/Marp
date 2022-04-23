@@ -258,7 +258,7 @@ section hr {
 }
 
 section small {
-    word-break: break-all;
+    overflow-wrap: break-word;
 }
 
 section code {
