@@ -257,6 +257,10 @@ section hr {
     background: var(--light-middle-color);
 }
 
+section small {
+    word-break: break-all;
+}
+
 section code {
     background: var(--light-code-block-color);
     color: var(--light-text-color);
