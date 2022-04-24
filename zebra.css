@@ -348,7 +348,7 @@ section small {
     text-decoration: none;
     color: var(--light-text-color);
     display: block;
-    line-height: 100%;
+    line-height: 1.35;
     overflow-wrap: break-word;
     border-top: 3px solid;
     border-top-color: var(--light-middle-color);
