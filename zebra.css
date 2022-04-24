@@ -333,8 +333,7 @@ section hr {
     background: var(--light-middle-color);
 }
 
-section sup a,
-section small a {
+section sup a {
     text-decoration: none;
     color: var(--light-text-color);
 }
@@ -346,6 +345,8 @@ section small {
     width: calc(100% - 140px);
     margin: 0 70px;
     font-size: 66%;
+    text-decoration: none;
+    color: var(--light-text-color);
     display: block;
     line-height: 100%;
     overflow-wrap: break-word;
@@ -660,12 +661,12 @@ section.light hr {
     background: var(--light-middle-color);
 }
 
-section.light sup a,
-section.light small a {
+section.light sup a {
     color: var(--light-text-color);
 }
 
 section.light small {
+    color: var(--light-text-color);
     border-top-color: var(--light-middle-color);
 }
 
@@ -764,12 +765,12 @@ section.dark hr {
     background: var(--dark-middle-color);
 }
 
-section.dark sup a,
-section.dark small a {
+section.dark sup a {
     color: var(--dark-text-color);
 }
 
 section.dark small {
+    color: var(--dark-text-color);
     border-top-color: var(--dark-middle-color);
 }
 
@@ -868,12 +869,12 @@ section.black hr {
     background: var(--black-middle-color);
 }
 
-section.black sup a,
-section.black small a {
+section.black sup a {
     color: var(--black-text-color);
 }
 
 section.black small {
+    color: var(--black-text-color);
     border-top-color: var(--black-middle-color);
 }
 
@@ -986,12 +987,12 @@ section.blue hr {
     background: var(--blue-middle-color);
 }
 
-section.blue sup a,
-section.blue small a {
+section.blue sup a {
     color: var(--blue-text-color);
 }
 
 section.blue small {
+    color: var(--blue-text-color);
     border-top-color: var(--blue-middle-color);
 }
 
@@ -1104,12 +1105,12 @@ section.green hr {
     background: var(--green-middle-color);
 }
 
-section.green sup a,
-section.green small a {
+section.green sup a {
     color: var(--green-text-color);
 }
 
 section.green small {
+    color: var(--green-text-color);
     border-top-color: var(--green-middle-color);
 }
 
