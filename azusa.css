@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*!
- * Marp / Marpit Azusa Colors and Azusa 3 (https://azusa3.sanographix.net) theme.
+ * Marp / Marpit Zebra and Zebra 2 (https://shoya.io/ja) theme.
  *
- * @theme azusa
+ * @theme zebra
  * @author Ko Isoda
  *
  * @auto-scaling true
@@ -11,7 +11,7 @@
  * @size 4:3 960px 720px
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans|Lato|Montserrat|Noto+Sans+JP|Roboto+Mono|Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato|Noto+Sans+JP|Oswald|Roboto|Roboto+Mono|Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone|Material+Symbols+Outlined|Material+Symbols+Rounded|Material+Symbols+Sharp");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
@@ -22,100 +22,55 @@
     --font-size: 35px;
     --heading-tags-line-spacing: 0.5em;
     --heading-upper-spacing: 50px;
-    --text-font: "Montserrat", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
-    --title-font: "Josefin Sans", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --text-font: "Roboto", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --title-font: "Oswald", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
     --code-font: "Source Code Pro", "Noto Sans JP", "Roboto Mono", monospace;
     --quote-font: "Times New Roman", serif;
     /* light */
-    --light-base-color: #fcfdf2;
-    --light-main-color: #393c41;
-    --light-accent-color: #19af77;
-    --light-text-color: #393c41;
-    --light-code-block-color: #eeeddc;
-    --light-table-block-color: rgba(57, 60, 65, 0.5);
-    --light-table-block-invert-color: rgba(252, 253, 242, 0.5);
-    --light-middle-color: #9b9d9a;
+    --light-base-color: #ffffff;
+    --light-main-color: #073543;
+    --light-accent-color: #0065c1;
+    --light-text-color: #073543;
+    --light-code-block-color: #094254;
+    --light-table-block-color: rgba(7, 53, 67, 0.5);
+    --light-table-block-invert-color: rgba(255, 255, 255, 0.5);
+    --light-middle-color: #839aa1;
     /* dark */
-    --dark-base-color: #191a1c;
-    --dark-main-color: #fcfdf2;
-    --dark-accent-color: #5ae08e;
-    --dark-text-color: #fcfdf2;
-    --dark-code-block-color: #393c41;
-    --dark-table-block-color: rgba(252, 253, 242, 0.5);
-    --dark-table-block-invert-color: rgba(25, 26, 28, 0.5);
-    --dark-middle-color: #8b8c87;
-    /* green */
-    --green-base-color: #fff5e3;
-    --green-main-color: #33b490;
-    --green-accent-color: #ff9000;
-    --green-text-color: #464e70;
-    --green-code-block-color: #393c41;
-    --green-table-block-color: rgba(51, 180, 144, 0.5);
-    --green-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --green-middle-color: #a3a2aa;
+    --dark-base-color: #073543;
+    --dark-main-color: #ffffff;
+    --dark-accent-color: #008d92;
+    --dark-text-color: #ffffff;
+    --dark-code-block-color: #cccccc;
+    --dark-table-block-color: rgba(255, 255, 255, 0.5);
+    --dark-table-block-invert-color: rgba(7, 53, 67, 0.5);
+    --dark-middle-color: #839aa1;
     /* black */
-    --black-base-color: #fff5e3;
-    --black-main-color: #464e70;
-    --black-accent-color: #33b490;
-    --black-text-color: #464e70;
-    --black-code-block-color: #393c41;
-    --black-table-block-color: rgba(70, 78, 112, 0.5);
-    --black-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --black-middle-color: #a3a2aa;
-    /* purple */
-    --purple-base-color: #fff5e3;
-    --purple-main-color: #b967c7;
-    --purple-accent-color: #ff9000;
-    --purple-text-color: #464e70;
-    --purple-code-block-color: #393c41;
-    --purple-table-block-color: rgba(185, 103, 199, 0.5);
-    --purple-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --purple-middle-color: #a3a2aa;
+    --black-base-color: #ffffff;
+    --black-main-color: #333333;
+    --black-accent-color: #008d92;
+    --black-text-color: #333333;
+    --black-code-block-color: #cccccc;
+    --black-table-block-color: rgba(51, 51, 51, 0.5);
+    --black-table-block-invert-color: rgba(255, 255, 255, 0.5);
+    --black-middle-color: #999999;
     /* blue */
-    --blue-base-color: #fff5e3;
-    --blue-main-color: #02a8f3;
-    --blue-accent-color: #ff3f80;
-    --blue-text-color: #464e70;
-    --blue-code-block-color: #393c41;
-    --blue-table-block-color: rgba(2, 168, 243, 0.5);
-    --blue-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --blue-middle-color: #a3a2aa;
-    /* cyan */
-    --cyan-base-color: #fff5e3;
-    --cyan-main-color: #00bbd3;
-    --cyan-accent-color: #ff5151;
-    --cyan-text-color: #464e70;
-    --cyan-code-block-color: #393c41;
-    --cyan-table-block-color: rgba(0, 187, 211, 0.5);
-    --cyan-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --cyan-middle-color: #a3a2aa;
-    /* yellow */
-    --yellow-base-color: #fff5e3;
-    --yellow-main-color: #ff9000;
-    --yellow-accent-color: #b967c7;
-    --yellow-text-color: #464e70;
-    --yellow-code-block-color: #393c41;
-    --yellow-table-block-color: rgba(255, 144, 0, 0.5);
-    --yellow-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --yellow-middle-color: #a3a2aa;
-    /* pink */
-    --pink-base-color: #fff5e3;
-    --pink-main-color: #ff3f80;
-    --pink-accent-color: #02a8f3;
-    --pink-text-color: #464e70;
-    --pink-code-block-color: #393c41;
-    --pink-table-block-color: rgba(255, 63, 128, 0.5);
-    --pink-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --pink-middle-color: #a3a2aa;
-    /* red */
-    --red-base-color: #fff5e3;
-    --red-main-color: #ff5151;
-    --red-accent-color: #00bbd3;
-    --red-text-color: #464e70;
-    --red-code-block-color: #393c41;
-    --red-table-block-color: rgba(255, 81, 81, 0.5);
-    --red-table-block-invert-color: rgba(255, 245, 227, 0.5);
-    --red-middle-color: #a3a2aa;
+    --blue-base-color: #ffffff;
+    --blue-main-color: #0065c1;
+    --blue-accent-color: #f339a5;
+    --blue-text-color: #333333;
+    --blue-code-block-color: #cccccc;
+    --blue-table-block-color: rgba(0, 101, 193, 0.5);
+    --blue-table-block-invert-color: rgba(255, 255, 255, 0.5);
+    --blue-middle-color: #999999;
+    /* green */
+    --green-base-color: #ffffff;
+    --green-main-color: #008d92;
+    --green-accent-color: #ff3e00;
+    --green-text-color: #333333;
+    --green-code-block-color: #cccccc;
+    --green-table-block-color: rgba(0, 141, 146, 0.5);
+    --green-table-block-invert-color: rgba(255, 255, 255, 0.5);
+    --green-middle-color: #999999;
 }
 
 /* common */
@@ -580,6 +535,25 @@ section.heading h2:nth-of-type(2) {
     font-size: 1.2em;
 }
 
+/* fixed heading */
+section.black h2,
+section.blue h2,
+section.green h2 {
+    margin: calc(-1 * var(--heading-upper-spacing)) -70px 0;
+    padding-top: var(--heading-upper-spacing);
+    padding-left: 70px;
+}
+
+section.black.title h2,
+section.blue.title h2,
+section.green.title h2,
+section.black.heading h2,
+section.blue.heading h2,
+section.green.heading h2 {
+    margin: 0;
+    padding: 0;
+}
+
 /* lead */
 section.lead {
     display: flex;
@@ -689,6 +663,10 @@ section.light hr {
     background: var(--light-middle-color);
 }
 
+section.light small {
+    border-top-color: var(--light-middle-color);
+}
+
 section.light code {
     background: var(--light-code-block-color);
     color: var(--light-text-color);
@@ -788,6 +766,10 @@ section.dark hr {
     background: var(--dark-middle-color);
 }
 
+section.dark small {
+    border-top-color: var(--dark-middle-color);
+}
+
 section.dark code {
     background: var(--dark-code-block-color);
     color: var(--dark-text-color);
@@ -856,125 +838,6 @@ section.dark.invert table tbody>tr:nth-child(odd) th {
     background: var(--dark-table-block-invert-color);
 }
 
-/* green */
-section.green {
-    color: var(--green-text-color);
-    background-color: var(--green-base-color);
-}
-
-section.green a {
-    color: var(--green-accent-color);
-}
-
-section.green mark {
-    color: var(--green-text-color);
-    background: linear-gradient(transparent 40%, var(--green-accent-color) 80%);
-}
-
-section.green i {
-    color: var(--green-accent-color);
-}
-
-section.green u {
-    text-decoration-color: var(--green-accent-color);
-}
-
-section.green sup a {
-    color: var(--green-text-color);
-}
-
-section.green hr {
-    background: var(--green-middle-color);
-}
-
-section.green code {
-    background: var(--green-code-block-color);
-    color: var(--green-text-color);
-}
-
-section.green h1 strong,
-section.green h2 strong,
-section.green h3 strong,
-section.green h4 strong,
-section.green h5 strong,
-section.green h6 strong {
-    color: var(--green-accent-color);
-}
-
-section.green pre>code {
-    background: var(--green-code-block-color);
-    color: var(--green-text-color);
-}
-
-section.green header,
-section.green footer,
-section.green section::after,
-section.green blockquote::before,
-section.green blockquote::after {
-    color: var(--green-middle-color);
-}
-
-section.green table th,
-section.green table td {
-    border-color: var(--green-text-color);
-}
-
-section.green table thead th {
-    background: var(--green-main-color);
-    color: var(--green-base-color);
-}
-
-section.green table tbody>tr:nth-child(odd) td,
-section.green table tbody>tr:nth-child(odd) th {
-    background: var(--green-table-block-color);
-}
-
-section.green:not(.title):not(.heading) h2 {
-    color: var(--green-main-color);
-}
-
-section.green.title,
-section.green.heading {
-    color: var(--green-base-color);
-    background-color: var(--green-main-color);
-}
-
-/* green invert */
-section.green.invert {
-    color: var(--green-base-color);
-    background-color: var(--green-main-color);
-}
-
-section.green.invert mark,
-section.green.invert sup a {
-    color: var(--green-base-color);
-}
-
-section.green.invert table th,
-section.green.invert table td {
-    border-color: var(--green-base-color);
-}
-
-section.green.invert table thead th {
-    background: var(--green-base-color);
-    color: var(--green-main-color);
-}
-
-section.green.invert table tbody>tr:nth-child(odd) td,
-section.green.invert table tbody>tr:nth-child(odd) th {
-    background: var(--green-table-block-invert-color);
-}
-
-section.green.invert:not(.title):not(.heading) h2 {
-    color: var(--green-text-color);
-}
-
-section.green.title.invert,
-section.green.heading.invert {
-    color: var(--green-main-color);
-    background-color: var(--green-base-color);
-}
-
 /* black */
 section.black {
     color: var(--black-text-color);
@@ -1004,6 +867,10 @@ section.black sup a {
 
 section.black hr {
     background: var(--black-middle-color);
+}
+
+section.black small {
+    border-top-color: var(--black-middle-color);
 }
 
 section.black code {
@@ -1048,10 +915,7 @@ section.black table tbody>tr:nth-child(odd) th {
     background: var(--black-table-block-color);
 }
 
-section.black:not(.title):not(.heading) h2 {
-    color: var(--black-main-color);
-}
-
+section.black h2,
 section.black.title,
 section.black.heading {
     color: var(--black-base-color);
@@ -1084,133 +948,11 @@ section.black.invert table tbody>tr:nth-child(odd) th {
     background: var(--black-table-block-invert-color);
 }
 
-section.black.invert:not(.title):not(.heading) h2 {
-    color: var(--black-base-color);
-}
-
+section.black.invert h2,
 section.black.title.invert,
 section.black.heading.invert {
     color: var(--black-main-color);
     background-color: var(--black-base-color);
-}
-
-/* purple */
-section.purple {
-    color: var(--purple-text-color);
-    background-color: var(--purple-base-color);
-}
-
-section.purple a {
-    color: var(--purple-accent-color);
-}
-
-section.purple mark {
-    color: var(--purple-text-color);
-    background: linear-gradient(transparent 40%, var(--purple-accent-color) 80%);
-}
-
-section.purple i {
-    color: var(--purple-accent-color);
-}
-
-section.purple u {
-    text-decoration-color: var(--purple-accent-color);
-}
-
-section.purple sup a {
-    color: var(--purple-text-color);
-}
-
-section.purple hr {
-    background: var(--purple-middle-color);
-}
-
-section.purple code {
-    background: var(--purple-code-block-color);
-    color: var(--purple-text-color);
-}
-
-section.purple h1 strong,
-section.purple h2 strong,
-section.purple h3 strong,
-section.purple h4 strong,
-section.purple h5 strong,
-section.purple h6 strong {
-    color: var(--purple-accent-color);
-}
-
-section.purple pre>code {
-    background: var(--purple-code-block-color);
-    color: var(--purple-text-color);
-}
-
-section.purple header,
-section.purple footer,
-section.purple section::after,
-section.purple blockquote::before,
-section.purple blockquote::after {
-    color: var(--purple-middle-color);
-}
-
-section.purple table th,
-section.purple table td {
-    border-color: var(--purple-text-color);
-}
-
-section.purple table thead th {
-    background: var(--purple-main-color);
-    color: var(--purple-base-color);
-}
-
-section.purple table tbody>tr:nth-child(odd) td,
-section.purple table tbody>tr:nth-child(odd) th {
-    background: var(--purple-table-block-color);
-}
-
-section.purple:not(.title):not(.heading) h2 {
-    color: var(--purple-main-color);
-}
-
-section.purple.title,
-section.purple.heading {
-    color: var(--purple-base-color);
-    background-color: var(--purple-main-color);
-}
-
-/* purple invert */
-section.purple.invert {
-    color: var(--purple-base-color);
-    background-color: var(--purple-main-color);
-}
-
-section.purple.invert mark,
-section.purple.invert sup a {
-    color: var(--purple-base-color);
-}
-
-section.purple.invert table th,
-section.purple.invert table td {
-    border-color: var(--purple-base-color);
-}
-
-section.purple.invert table thead th {
-    background: var(--purple-base-color);
-    color: var(--purple-main-color);
-}
-
-section.purple.invert table tbody>tr:nth-child(odd) td,
-section.purple.invert table tbody>tr:nth-child(odd) th {
-    background: var(--purple-table-block-invert-color);
-}
-
-section.purple.invert:not(.title):not(.heading) h2 {
-    color: var(--purple-text-color);
-}
-
-section.purple.title.invert,
-section.purple.heading.invert {
-    color: var(--purple-main-color);
-    background-color: var(--purple-base-color);
 }
 
 /* blue */
@@ -1242,6 +984,10 @@ section.blue sup a {
 
 section.blue hr {
     background: var(--blue-middle-color);
+}
+
+section.blue small {
+    border-top-color: var(--blue-middle-color);
 }
 
 section.blue code {
@@ -1286,10 +1032,7 @@ section.blue table tbody>tr:nth-child(odd) th {
     background: var(--blue-table-block-color);
 }
 
-section.blue:not(.title):not(.heading) h2 {
-    color: var(--blue-main-color);
-}
-
+section.blue h2,
 section.blue.title,
 section.blue.heading {
     color: var(--blue-base-color);
@@ -1322,488 +1065,126 @@ section.blue.invert table tbody>tr:nth-child(odd) th {
     background: var(--blue-table-block-invert-color);
 }
 
-section.blue.invert:not(.title):not(.heading) h2 {
-    color: var(--blue-text-color);
-}
-
+section.blue.invert h2,
 section.blue.title.invert,
 section.blue.heading.invert {
     color: var(--blue-main-color);
     background-color: var(--blue-base-color);
 }
 
-/* cyan */
-section.cyan {
-    color: var(--cyan-text-color);
-    background-color: var(--cyan-base-color);
+/* green */
+section.green {
+    color: var(--green-text-color);
+    background-color: var(--green-base-color);
 }
 
-section.cyan a {
-    color: var(--cyan-accent-color);
+section.green a {
+    color: var(--green-accent-color);
 }
 
-section.cyan mark {
-    color: var(--cyan-text-color);
-    background: linear-gradient(transparent 40%, var(--cyan-accent-color) 80%);
+section.green mark {
+    color: var(--green-text-color);
+    background: linear-gradient(transparent 40%, var(--green-accent-color) 80%);
 }
 
-section.cyan i {
-    color: var(--cyan-accent-color);
+section.green i {
+    color: var(--green-accent-color);
 }
 
-section.cyan u {
-    text-decoration-color: var(--cyan-accent-color);
+section.green u {
+    text-decoration-color: var(--green-accent-color);
 }
 
-section.cyan sup a {
-    color: var(--cyan-text-color);
+section.green sup a {
+    color: var(--green-text-color);
 }
 
-section.cyan hr {
-    background: var(--cyan-middle-color);
+section.green hr {
+    background: var(--green-middle-color);
 }
 
-section.cyan code {
-    background: var(--cyan-code-block-color);
-    color: var(--cyan-text-color);
+section.green small {
+    border-top-color: var(--green-middle-color);
 }
 
-section.cyan h1 strong,
-section.cyan h2 strong,
-section.cyan h3 strong,
-section.cyan h4 strong,
-section.cyan h5 strong,
-section.cyan h6 strong {
-    color: var(--cyan-accent-color);
+section.green code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
 }
 
-section.cyan pre>code {
-    background: var(--cyan-code-block-color);
-    color: var(--cyan-text-color);
+section.green h1 strong,
+section.green h2 strong,
+section.green h3 strong,
+section.green h4 strong,
+section.green h5 strong,
+section.green h6 strong {
+    color: var(--green-accent-color);
 }
 
-section.cyan header,
-section.cyan footer,
-section.cyan section::after,
-section.cyan blockquote::before,
-section.cyan blockquote::after {
-    color: var(--cyan-middle-color);
+section.green pre>code {
+    background: var(--green-code-block-color);
+    color: var(--green-text-color);
 }
 
-section.cyan table th,
-section.cyan table td {
-    border-color: var(--cyan-text-color);
+section.green header,
+section.green footer,
+section.green section::after,
+section.green blockquote::before,
+section.green blockquote::after {
+    color: var(--green-middle-color);
 }
 
-section.cyan table thead th {
-    background: var(--cyan-main-color);
-    color: var(--cyan-base-color);
+section.green table th,
+section.green table td {
+    border-color: var(--green-text-color);
 }
 
-section.cyan table tbody>tr:nth-child(odd) td,
-section.cyan table tbody>tr:nth-child(odd) th {
-    background: var(--cyan-table-block-color);
+section.green table thead th {
+    background: var(--green-main-color);
+    color: var(--green-base-color);
 }
 
-section.cyan:not(.title):not(.heading) h2 {
-    color: var(--cyan-main-color);
+section.green table tbody>tr:nth-child(odd) td,
+section.green table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-color);
 }
 
-section.cyan.title,
-section.cyan.heading {
-    color: var(--cyan-base-color);
-    background-color: var(--cyan-main-color);
+section.green h2,
+section.green.title,
+section.green.heading {
+    color: var(--green-base-color);
+    background-color: var(--green-main-color);
 }
 
-/* cyan invert */
-section.cyan.invert {
-    color: var(--cyan-base-color);
-    background-color: var(--cyan-main-color);
+/* green invert */
+section.green.invert {
+    color: var(--green-base-color);
+    background-color: var(--green-main-color);
 }
 
-section.cyan.invert mark,
-section.cyan.invert sup a {
-    color: var(--cyan-base-color);
+section.green.invert mark,
+section.green.invert sup a {
+    color: var(--green-base-color);
 }
 
-section.cyan.invert table th,
-section.cyan.invert table td {
-    border-color: var(--cyan-base-color);
+section.green.invert table th,
+section.green.invert table td {
+    border-color: var(--green-base-color);
 }
 
-section.cyan.invert table thead th {
-    background: var(--cyan-base-color);
-    color: var(--cyan-main-color);
+section.green.invert table thead th {
+    background: var(--green-base-color);
+    color: var(--green-main-color);
 }
 
-section.cyan.invert table tbody>tr:nth-child(odd) td,
-section.cyan.invert table tbody>tr:nth-child(odd) th {
-    background: var(--cyan-table-block-invert-color);
+section.green.invert table tbody>tr:nth-child(odd) td,
+section.green.invert table tbody>tr:nth-child(odd) th {
+    background: var(--green-table-block-invert-color);
 }
 
-section.cyan.invert:not(.title):not(.heading) h2 {
-    color: var(--cyan-text-color);
-}
-
-section.cyan.title.invert,
-section.cyan.heading.invert {
-    color: var(--cyan-main-color);
-    background-color: var(--cyan-base-color);
-}
-
-/* yellow */
-section.yellow {
-    color: var(--yellow-text-color);
-    background-color: var(--yellow-base-color);
-}
-
-section.yellow a {
-    color: var(--yellow-accent-color);
-}
-
-section.yellow mark {
-    color: var(--yellow-text-color);
-    background: linear-gradient(transparent 40%, var(--yellow-accent-color) 80%);
-}
-
-section.yellow i {
-    color: var(--yellow-accent-color);
-}
-
-section.yellow u {
-    text-decoration-color: var(--yellow-accent-color);
-}
-
-section.yellow sup a {
-    color: var(--yellow-text-color);
-}
-
-section.yellow hr {
-    background: var(--yellow-middle-color);
-}
-
-section.yellow code {
-    background: var(--yellow-code-block-color);
-    color: var(--yellow-text-color);
-}
-
-section.yellow h1 strong,
-section.yellow h2 strong,
-section.yellow h3 strong,
-section.yellow h4 strong,
-section.yellow h5 strong,
-section.yellow h6 strong {
-    color: var(--yellow-accent-color);
-}
-
-section.yellow pre>code {
-    background: var(--yellow-code-block-color);
-    color: var(--yellow-text-color);
-}
-
-section.yellow header,
-section.yellow footer,
-section.yellow section::after,
-section.yellow blockquote::before,
-section.yellow blockquote::after {
-    color: var(--yellow-middle-color);
-}
-
-section.yellow table th,
-section.yellow table td {
-    border-color: var(--yellow-text-color);
-}
-
-section.yellow table thead th {
-    background: var(--yellow-main-color);
-    color: var(--yellow-base-color);
-}
-
-section.yellow table tbody>tr:nth-child(odd) td,
-section.yellow table tbody>tr:nth-child(odd) th {
-    background: var(--yellow-table-block-color);
-}
-
-section.yellow:not(.title):not(.heading) h2 {
-    color: var(--yellow-main-color);
-}
-
-section.yellow.title,
-section.yellow.heading {
-    color: var(--yellow-base-color);
-    background-color: var(--yellow-main-color);
-}
-
-/* yellow invert */
-section.yellow.invert {
-    color: var(--yellow-base-color);
-    background-color: var(--yellow-main-color);
-}
-
-section.yellow.invert mark,
-section.yellow.invert sup a {
-    color: var(--yellow-base-color);
-}
-
-section.yellow.invert table th,
-section.yellow.invert table td {
-    border-color: var(--yellow-base-color);
-}
-
-section.yellow.invert table thead th {
-    background: var(--yellow-base-color);
-    color: var(--yellow-main-color);
-}
-
-section.yellow.invert table tbody>tr:nth-child(odd) td,
-section.yellow.invert table tbody>tr:nth-child(odd) th {
-    background: var(--yellow-table-block-invert-color);
-}
-
-section.yellow.invert:not(.title):not(.heading) h2 {
-    color: var(--yellow-text-color);
-}
-
-section.yellow.title.invert,
-section.yellow.heading.invert {
-    color: var(--yellow-main-color);
-    background-color: var(--yellow-base-color);
-}
-
-/* pink */
-section.pink {
-    color: var(--pink-text-color);
-    background-color: var(--pink-base-color);
-}
-
-section.pink a {
-    color: var(--pink-accent-color);
-}
-
-section.pink mark {
-    color: var(--pink-text-color);
-    background: linear-gradient(transparent 40%, var(--pink-accent-color) 80%);
-}
-
-section.pink i {
-    color: var(--pink-accent-color);
-}
-
-section.pink u {
-    text-decoration-color: var(--pink-accent-color);
-}
-
-section.pink sup a {
-    color: var(--pink-text-color);
-}
-
-section.pink hr {
-    background: var(--pink-middle-color);
-}
-
-section.pink code {
-    background: var(--pink-code-block-color);
-    color: var(--pink-text-color);
-}
-
-section.pink h1 strong,
-section.pink h2 strong,
-section.pink h3 strong,
-section.pink h4 strong,
-section.pink h5 strong,
-section.pink h6 strong {
-    color: var(--pink-accent-color);
-}
-
-section.pink pre>code {
-    background: var(--pink-code-block-color);
-    color: var(--pink-text-color);
-}
-
-section.pink header,
-section.pink footer,
-section.pink section::after,
-section.pink blockquote::before,
-section.pink blockquote::after {
-    color: var(--pink-middle-color);
-}
-
-section.pink table th,
-section.pink table td {
-    border-color: var(--pink-text-color);
-}
-
-section.pink table thead th {
-    background: var(--pink-main-color);
-    color: var(--pink-base-color);
-}
-
-section.pink table tbody>tr:nth-child(odd) td,
-section.pink table tbody>tr:nth-child(odd) th {
-    background: var(--pink-table-block-color);
-}
-
-section.pink:not(.title):not(.heading) h2 {
-    color: var(--pink-main-color);
-}
-
-section.pink.title,
-section.pink.heading {
-    color: var(--pink-base-color);
-    background-color: var(--pink-main-color);
-}
-
-/* pink invert */
-section.pink.invert {
-    color: var(--pink-base-color);
-    background-color: var(--pink-main-color);
-}
-
-section.pink.invert mark,
-section.pink.invert sup a {
-    color: var(--pink-base-color);
-}
-
-section.pink.invert table th,
-section.pink.invert table td {
-    border-color: var(--pink-base-color);
-}
-
-section.pink.invert table thead th {
-    background: var(--pink-base-color);
-    color: var(--pink-main-color);
-}
-
-section.pink.invert table tbody>tr:nth-child(odd) td,
-section.pink.invert table tbody>tr:nth-child(odd) th {
-    background: var(--pink-table-block-invert-color);
-}
-
-section.pink.invert:not(.title):not(.heading) h2 {
-    color: var(--pink-text-color);
-}
-
-section.pink.title.invert,
-section.pink.heading.invert {
-    color: var(--pink-main-color);
-    background-color: var(--pink-base-color);
-}
-
-/* red */
-section.red {
-    color: var(--red-text-color);
-    background-color: var(--red-base-color);
-}
-
-section.red a {
-    color: var(--red-accent-color);
-}
-
-section.red mark {
-    color: var(--red-text-color);
-    background: linear-gradient(transparent 40%, var(--red-accent-color) 80%);
-}
-
-section.red i {
-    color: var(--red-accent-color);
-}
-
-section.red u {
-    text-decoration-color: var(--red-accent-color);
-}
-
-section.red sup a {
-    color: var(--red-text-color);
-}
-
-section.red hr {
-    background: var(--red-middle-color);
-}
-
-section.red code {
-    background: var(--red-code-block-color);
-    color: var(--red-text-color);
-}
-
-section.red h1 strong,
-section.red h2 strong,
-section.red h3 strong,
-section.red h4 strong,
-section.red h5 strong,
-section.red h6 strong {
-    color: var(--red-accent-color);
-}
-
-section.red pre>code {
-    background: var(--red-code-block-color);
-    color: var(--red-text-color);
-}
-
-section.red header,
-section.red footer,
-section.red section::after,
-section.red blockquote::before,
-section.red blockquote::after {
-    color: var(--red-middle-color);
-}
-
-section.red table th,
-section.red table td {
-    border-color: var(--red-text-color);
-}
-
-section.red table thead th {
-    background: var(--red-main-color);
-    color: var(--red-base-color);
-}
-
-section.red table tbody>tr:nth-child(odd) td,
-section.red table tbody>tr:nth-child(odd) th {
-    background: var(--red-table-block-color);
-}
-
-section.red:not(.title):not(.heading) h2 {
-    color: var(--red-main-color);
-}
-
-section.red.title,
-section.red.heading {
-    color: var(--red-base-color);
-    background-color: var(--red-main-color);
-}
-
-/* red invert */
-section.red.invert {
-    color: var(--red-base-color);
-    background-color: var(--red-main-color);
-}
-
-section.red.invert mark,
-section.red.invert sup a {
-    color: var(--red-base-color);
-}
-
-section.red.invert table th,
-section.red.invert table td {
-    border-color: var(--red-base-color);
-}
-
-section.red.invert table thead th {
-    background: var(--red-base-color);
-    color: var(--red-main-color);
-}
-
-section.red.invert table tbody>tr:nth-child(odd) td,
-section.red.invert table tbody>tr:nth-child(odd) th {
-    background: var(--red-table-block-invert-color);
-}
-
-section.red.invert:not(.title):not(.heading) h2 {
-    color: var(--red-text-color);
-}
-
-section.red.title.invert,
-section.red.heading.invert {
-    color: var(--red-main-color);
-    background-color: var(--red-base-color);
+section.green.invert h2,
+section.green.title.invert,
+section.green.heading.invert {
+    color: var(--green-main-color);
+    background-color: var(--green-base-color);
 }
