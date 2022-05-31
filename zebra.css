@@ -359,6 +359,7 @@ section small::before {
     height: 3px;
     background-color: var(--light-middle-color);
     display: block;
+    content: "";
 }
 
 .mb-0 {
