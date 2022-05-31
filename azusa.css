@@ -388,14 +388,23 @@ section small {
     position: absolute;
     left: 0;
     bottom: 50px;
-    width: calc(40% - 140px);
+    width: calc(100% - 140px);
     margin: 0 70px;
     font-size: 66%;
     display: block;
     line-height: 1.35;
     overflow-wrap: break-word;
-    border-top: 3px solid;
-    border-top-color: var(--light-middle-color);
+}
+
+section small::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 3px;
+    background-color: var(--light-middle-color);
+    display: block;
+    content: "";
 }
 
 .mb-0 {
@@ -691,8 +700,8 @@ section.light small a {
     color: var(--light-text-color);
 }
 
-section.light small {
-    border-top-color: var(--light-middle-color);
+section.light small::before {
+    background-color: var(--light-middle-color);
 }
 
 section.light code {
@@ -795,8 +804,8 @@ section.dark small a {
     color: var(--dark-text-color);
 }
 
-section.dark small {
-    border-top-color: var(--dark-middle-color);
+section.dark small::before {
+    background-color: var(--dark-middle-color);
 }
 
 section.dark code {
@@ -899,8 +908,8 @@ section.green small a {
     color: var(--green-text-color);
 }
 
-section.green small {
-    border-top-color: var(--green-middle-color);
+section.green small::before {
+    background-color: var(--green-middle-color);
 }
 
 section.green code {
@@ -1023,8 +1032,8 @@ section.black small a {
     color: var(--black-text-color);
 }
 
-section.black small {
-    border-top-color: var(--black-middle-color);
+section.black small::before {
+    background-color: var(--black-middle-color);
 }
 
 section.black code {
@@ -1147,8 +1156,8 @@ section.purple small a {
     color: var(--purple-text-color);
 }
 
-section.purple small {
-    border-top-color: var(--purple-middle-color);
+section.purple small::before {
+    background-color: var(--purple-middle-color);
 }
 
 section.purple code {
@@ -1271,8 +1280,8 @@ section.blue small a {
     color: var(--blue-text-color);
 }
 
-section.blue small {
-    border-top-color: var(--blue-middle-color);
+section.blue small::before {
+    background-color: var(--blue-middle-color);
 }
 
 section.blue code {
@@ -1395,8 +1404,8 @@ section.cyan small a {
     color: var(--cyan-text-color);
 }
 
-section.cyan small {
-    border-top-color: var(--cyan-middle-color);
+section.cyan small::before {
+    background-color: var(--cyan-middle-color);
 }
 
 section.cyan code {
@@ -1519,8 +1528,8 @@ section.yellow small a {
     color: var(--yellow-text-color);
 }
 
-section.yellow small {
-    border-top-color: var(--yellow-middle-color);
+section.yellow small::before {
+    background-color: var(--yellow-middle-color);
 }
 
 section.yellow code {
@@ -1643,8 +1652,8 @@ section.pink small a {
     color: var(--pink-text-color);
 }
 
-section.pink small {
-    border-top-color: var(--pink-middle-color);
+section.pink small::before {
+    background-color: var(--pink-middle-color);
 }
 
 section.pink code {
@@ -1767,8 +1776,8 @@ section.red small a {
     color: var(--red-text-color);
 }
 
-section.red small {
-    border-top-color: var(--red-middle-color);
+section.red small::before {
+    background-color: var(--red-middle-color);
 }
 
 section.red code {
