@@ -388,7 +388,7 @@ section small {
     position: absolute;
     left: 0;
     bottom: 50px;
-    width: calc(100% - 140px);
+    width: calc(40% - 140px);
     margin: 0 70px;
     font-size: 66%;
     display: block;
