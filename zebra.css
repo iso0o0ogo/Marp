@@ -674,8 +674,8 @@ section.light small a {
     color: var(--light-text-color);
 }
 
-section.light small {
-    border-top-color: var(--light-middle-color);
+section.light small::before {
+    background-color: var(--light-middle-color);
 }
 
 section.light code {
@@ -778,8 +778,8 @@ section.dark small a {
     color: var(--dark-text-color);
 }
 
-section.dark small {
-    border-top-color: var(--dark-middle-color);
+section.dark small::before {
+    background-color: var(--dark-middle-color);
 }
 
 section.dark code {
@@ -882,8 +882,8 @@ section.black small a {
     color: var(--black-text-color);
 }
 
-section.black small {
-    border-top-color: var(--black-middle-color);
+section.black small::before {
+    background-color: var(--black-middle-color);
 }
 
 section.black code {
@@ -1000,8 +1000,8 @@ section.blue small a {
     color: var(--blue-text-color);
 }
 
-section.blue small {
-    border-top-color: var(--blue-middle-color);
+section.blue small::before {
+    background-color: var(--blue-middle-color);
 }
 
 section.blue code {
@@ -1118,8 +1118,8 @@ section.green small a {
     color: var(--green-text-color);
 }
 
-section.green small {
-    border-top-color: var(--green-middle-color);
+section.green small::before {
+    background-color: var(--green-middle-color);
 }
 
 section.green code {
