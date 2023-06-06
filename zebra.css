@@ -23,7 +23,7 @@
     --heading-tags-line-spacing: 0.5em;
     --heading-upper-spacing: 40px;
     --text-font: "Roboto", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
-    --title-font: "Oswald", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
+    --title-font: "Roboto", "Oswald", "Noto Sans JP", "Lato", "Avenir Next", "Avenir", "Trebuchet MS", "Segoe UI", sans-serif;
     --code-font: "Source Code Pro", "Noto Sans JP", "Roboto Mono", monospace;
     --quote-font: "Times New Roman", serif;
     /* light */
@@ -360,6 +360,10 @@ section small::before {
     background-color: var(--light-middle-color);
     display: block;
     content: "";
+}
+
+section s {
+    display: none;
 }
 
 .mb-0 {
