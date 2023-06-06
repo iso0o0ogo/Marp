@@ -3,7 +3,7 @@
 /*!
  * Marp / Marpit Zebra and Zebra 2 (https://shoya.io/ja) theme.
  *
- * @theme zebra
+ * @theme zebrax
  * @author Ko Isoda
  *
  * @auto-scaling true
@@ -362,7 +362,7 @@ section small::before {
     content: "";
 }
 
-section s {
+section comment {
     display: none;
 }
 
@@ -551,8 +551,11 @@ section.heading h2:nth-of-type(2) {
 
 /* fixed heading */
 section.black h2,
+section.black h3,
 section.blue h2,
-section.green h2 {
+section.blue h3,
+section.green h2,
+section.green h3 {
     margin: calc(-1 * var(--heading-upper-spacing)) -70px 0;
     padding-top: var(--heading-upper-spacing);
     padding-left: 70px;
@@ -933,6 +936,7 @@ section.black table tbody>tr:nth-child(odd) th {
 }
 
 section.black h2,
+section.black h3,
 section.black.title,
 section.black.heading {
     color: var(--black-base-color);
@@ -1051,6 +1055,7 @@ section.blue table tbody>tr:nth-child(odd) th {
 }
 
 section.blue h2,
+section.blue h3,
 section.blue.title,
 section.blue.heading {
     color: var(--blue-base-color);
@@ -1169,6 +1174,7 @@ section.green table tbody>tr:nth-child(odd) th {
 }
 
 section.green h2,
+section.green h3,
 section.green.title,
 section.green.heading {
     color: var(--green-base-color);
