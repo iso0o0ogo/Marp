@@ -298,7 +298,8 @@ section::after {
 }
 
 section a {
-    color: var(--light-accent-color);
+    text-decoration: none;
+    color: var(--light-text-color);
 }
 
 section code {
@@ -679,7 +680,7 @@ section.light {
 }
 
 section.light a {
-    color: var(--light-accent-color);
+    color: var(--light-text-color);
 }
 
 section.light mark {
@@ -783,7 +784,7 @@ section.dark {
 }
 
 section.dark a {
-    color: var(--dark-accent-color);
+    color: var(--dark-text-color);
 }
 
 section.dark mark {
@@ -887,7 +888,7 @@ section.green {
 }
 
 section.green a {
-    color: var(--green-accent-color);
+    color: var(--green-text-color);
 }
 
 section.green mark {
@@ -1011,7 +1012,7 @@ section.black {
 }
 
 section.black a {
-    color: var(--black-accent-color);
+    color: var(--black-text-color);
 }
 
 section.black mark {
@@ -1135,7 +1136,7 @@ section.purple {
 }
 
 section.purple a {
-    color: var(--purple-accent-color);
+    color: var(--purple-text-color);
 }
 
 section.purple mark {
@@ -1259,7 +1260,7 @@ section.blue {
 }
 
 section.blue a {
-    color: var(--blue-accent-color);
+    color: var(--blue-text-color);
 }
 
 section.blue mark {
@@ -1383,7 +1384,7 @@ section.cyan {
 }
 
 section.cyan a {
-    color: var(--cyan-accent-color);
+    color: var(--cyan-text-color);
 }
 
 section.cyan mark {
@@ -1507,7 +1508,7 @@ section.yellow {
 }
 
 section.yellow a {
-    color: var(--yellow-accent-color);
+    color: var(--yellow-text-color);
 }
 
 section.yellow mark {
@@ -1631,7 +1632,7 @@ section.pink {
 }
 
 section.pink a {
-    color: var(--pink-accent-color);
+    color: var(--pink-text-color);
 }
 
 section.pink mark {
@@ -1755,7 +1756,7 @@ section.red {
 }
 
 section.red a {
-    color: var(--red-accent-color);
+    color: var(--red-text-color);
 }
 
 section.red mark {
