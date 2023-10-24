@@ -333,6 +333,7 @@ section hr {
     background: var(--light-middle-color);
 }
 
+section a,
 section sup a,
 section small a {
     text-decoration: none;
