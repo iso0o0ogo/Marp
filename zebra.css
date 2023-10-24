@@ -253,7 +253,8 @@ section::after {
 }
 
 section a {
-    color: var(--light-accent-color);
+    text-decoration: none;
+    color: var(--light-text-color);
 }
 
 section code {
@@ -333,7 +334,6 @@ section hr {
     background: var(--light-middle-color);
 }
 
-section a,
 section sup a,
 section small a {
     text-decoration: none;
@@ -657,7 +657,7 @@ section.light {
 }
 
 section.light a {
-    color: var(--light-accent-color);
+    color: var(--light-text-color);
 }
 
 section.light mark {
@@ -761,7 +761,7 @@ section.dark {
 }
 
 section.dark a {
-    color: var(--dark-accent-color);
+    color: var(--dark-text-color);
 }
 
 section.dark mark {
@@ -865,7 +865,7 @@ section.black {
 }
 
 section.black a {
-    color: var(--black-accent-color);
+    color: var(--black-text-color);
 }
 
 section.black mark {
@@ -984,7 +984,7 @@ section.blue {
 }
 
 section.blue a {
-    color: var(--blue-accent-color);
+    color: var(--blue-text-color);
 }
 
 section.blue mark {
@@ -1103,7 +1103,7 @@ section.green {
 }
 
 section.green a {
-    color: var(--green-accent-color);
+    color: var(--green-text-color);
 }
 
 section.green mark {
